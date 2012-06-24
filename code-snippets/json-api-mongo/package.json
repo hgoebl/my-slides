@@ -1,0 +1,13 @@
+{
+    "name": "json-api-mongodb",
+    "version": "0.0.1-SNAPSHOT",
+    "private": true,
+    "dependencies": {
+        "express": ">= 2.5.x",
+        "mongodb": ">= 1.0.0",
+        "async": "*"
+    },
+    "devDependencies": {
+        "request": ">= 2.9.x"
+    }
+}

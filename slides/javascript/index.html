@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>JavaScript - not only for Java Developers</title>
+    <meta name="generator" content="github.com/hgoebl/nerdshow"/>
+    <meta name="version" content="S5 1.3"/>
+    <meta name="author" content="Heinrich Göbl"/>
+    <meta name="company" content="www.goebl.com"/>
+    <!-- extensions -->
+    <meta name="transitions" content="no"/>
+    <script src="http://hgoebl.github.com/nerdshow/rt/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="http://hgoebl.github.com/nerdshow/rt/s5/ui/common/s5.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://hgoebl.github.com/nerdshow/rt/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
+    <style>
+        img.scaled-centered {
+            max-width:100%;
+            max-height:100%;
+            display:block;
+            margin:auto;
+        }
+        table.info {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            margin:auto;
+            width: 80%;
+            text-align: left;
+            border-collapse: collapse;
+            border: 1px solid #69c;
+        }
+        table.info th {
+            padding: 12px 17px 12px 17px;
+            font-weight: normal;
+            color: #039;
+            border-bottom: 1px dashed #69c;
+        }
+        table.info td {
+            padding: 7px 17px 7px 17px;
+            color: #669;
+        }
+        table.info tbody tr:hover td {
+            color: #339;
+            background: #d0dafd;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div id="header"></div>
+    <!-- div id="footer">
+        <h1>--no-footer--</h1>
+
+        <h2>hgoebl &#8226; 2012</h2>
+    </div -->
+    <div class="topleft"></div>
+    <div class="topright"></div>
+    <div class="bottomleft"></div>
+    <div class="bottomright"></div>
+</div>
+<div class="presentation">
+
+    <div class="slide">
+
+<h1>JavaScript</h1>
+<h2>Not only for Java Programmers</h2>
+<h3>Heinrich Göbl</h3>
+<h4>www.goebl.com</h4>
+</div><div class="slide" style="">
+
+<h1>About me</h1>
+<table><tr><td>
+
+<ul>
+<li>Heinrich Göbl</li>
+<li>Day job as JEE programmer at <a href="http://www.agenda-software.de/">AGENDA Software GmbH</a></li>
+<li>Focus on Java EE</li>
+<li><span style="color: #277633; font-weight: bold">&ldquo;I like JavaScript ;-)&rdquo;</span></li>
+</ul>
+</td><td style="padding-left: 1em">
+
+<p><img src="media/hgoebl-480x480.jpg" class="scaled-centered">
+
+</p>
+</td></tr></table>
+
+</div>
+
+<div class="slide">
+
+<h1>JUGM Survey (1)</h1>
+<div style="background: url('media/weight-javascript.png') no-repeat; background-position: center center; height: 100%"></div>
+
+</div><div class="slide" style="">
+
+<h1>JUGM Survey (2)</h1>
+<div style="background: url('media/weight-nodejs.png') no-repeat; background-position: center center; height: 100%"></div>
+
+</div><div class="slide" style="">
+
+<h1>JUGM Survey (3)</h1>
+<div style="background: url('media/weight-mongodb.png') no-repeat; background-position: center center; height: 100%"></div>
+
+</div><div class="slide" style="">
+
+<h1>JUGM Survey (4)</h1>
+<div style="background: url('media/javascript-items.png') no-repeat; background-position: center center; height: 100%"></div>
+
+</div><div class="slide" style="">
+
+<h1>JUGM Survey (5)</h1>
+<div style="background: url('media/javascript-expert-level.png') no-repeat; background-position: center center; height: 100%"></div>
+
+</div>
+
+<div class="slide">
+
+<h1>What is JavaScript?</h1>
+<p><strong> <a href="http://en.wikipedia.org/wiki/JavaScript">http://en.wikipedia.org/wiki/JavaScript</a> </strong>
+
+</p>
+<p><br/>
+
+</p>
+<p>JavaScript
+
+</p>
+<p><br/>
+
+</p>
+<ul>
+<li>is a <strong>prototype-based</strong></li>
+<li><strong>scripting language</strong>,</li>
+<li>that is <strong>dynamic</strong>,</li>
+<li><strong>weakly typed</strong></li>
+<li>and has <strong>first-class functions</strong>.</li>
+</ul>
+   <div class="handout">
+
+<ul>
+<li>An implementation of ECMAScript (ES + DOM + BOM)</li>
+<li>Roots:<ul>
+<li>syntax -&gt; from <strong>C</strong></li>
+<li>names and naming conventions -&gt; from <strong>Java</strong></li>
+<li>key design principles -&gt; from <strong>Self</strong> and <strong>Scheme</strong></li>
+</ul>
+</li>
+<li>Cool, expressive language, but with some gotchas</li>
+<li>Douglas &quot;Good Parts&quot; Crockford:<ul>
+<li>&quot;Lisp in C&#39;s clothing&quot;</li>
+<li>&quot;The most misunderstood programming language&quot;</li>
+</ul>
+</li>
+</ul>
+   </div>
+
+</div><div class="slide">
+
+<h1>Why JavaScript?</h1>
+<ul>
+<li>Runs in all browsers</li>
+<li>Non-native Apps (smartphones, tablets)</li>
+<li>Part of html5 (=html + css3 + javascript)</li>
+<li>Rebirth came with AJAX</li>
+<li>Makes fun in Node.js and MongoDB</li>
+<li>Underestimated by most Java programmers</li>
+<li>It&#39;s gaining momentum!</li>
+</ul>
+   <div class="handout">
+
+<h2>Where JavaScript?</h2>
+<ul>
+<li>Browser</li>
+<li>Server</li>
+<li>Mobile Devices</li>
+<li>Browser Plugins</li>
+<li>Photoshop Plugins</li>
+<li>Windows Script Host (JScript)</li>
+<li><a href="http://www.2ality.com/2011/06/implementing-bookmarklets.html">Bookmarklets</a></li>
+<li><span style="color: #aaa">ActionScript (Adobe Flash, Flex, Air)</span></li>
+</ul>
+   </div>
+
+</div>
+
+<div class="slide">
+
+<h1>Object Literals</h1>
+<pre><code class="lang-javascript">var obj = {
+    name: &quot;String&quot;,
+    &quot;while&quot;: &quot;keyword as property name&quot;,
+    flag: true,
+    root2: 1.414213562,
+    method: function () {
+        return new Date();
+    },
+    lines: [ 1, 2, &quot;abc&quot; ]
+};</code></pre>
+</div><div class="slide">
+
+<h1>Objects</h1>
+<p>Objects are associative arrays
+
+</p>
+<pre><code class="lang-javascript">var obj = {};     // new Object() no longer used
+obj.prop = &#39;Jason&#39;;
+obj[&#39;prop&#39;] = &#39;Bourne&#39;;
+&#39;prop&#39; in obj;    // true
+obj.prop = null;
+&#39;prop&#39; in obj;    // true
+delete obj.prop;
+&#39;prop&#39; in obj;    // false
+obj.prop;         // undefined</code></pre>
+</div><div class="slide">
+
+<h1>JSON</h1>
+<pre><code class="lang-javascript">[ 30, 10, &quot;Jason&quot; ]</code></pre>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">{ &quot;prop1&quot;: &quot;value&quot;, &quot;prop2&quot;: 1.414213562,
+  &quot;prop3&quot;: null,    &quot;prop4&quot;: true,
+  &quot;prop5&quot;: [ 30, 10, &quot;Jason&quot; ],
+  &quot;prop6&quot;: { &quot;x&quot;: 10, &quot;y&quot;: -1 }
+}</code></pre>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">true</code></pre>
+   <div class="handout">
+
+<ul>
+<li>JSON := JavaScript Object Notation</li>
+<li>stricter than Object literals<ul>
+<li>Property names must be quoted with &quot;</li>
+<li>simple values like boolean, string, number, null</li>
+<li>no representations for Date, RegExp</li>
+<li><strong>no functions!</strong></li>
+</ul>
+</li>
+<li>heavily used in RESTful services with mobile clients</li>
+<li><code>JSON.parse()</code> and <code>JSON.stringify()</code></li>
+</ul>
+   </div>
+
+</div>
+
+<div class="slide">
+
+<h1>Arrays</h1>
+<pre><code class="lang-javascript">var array = [ 30, 10, &quot;Jason&quot;, new Date() ];
+
+array.push({ prop: &quot;Bourne&quot; });
+// equiv. w/ push
+array[array.length] = &quot;Last Element&quot;;
+array.length;        // 6
+array[100];          // undefined -&gt; no Exception!
+array[1000] = true;
+array.length;        // 1001
+typeof array;        // &#39;object&#39;</code></pre>
+   <div class="handout">
+
+<ul>
+<li>homogeneity is not enforced</li>
+<li>can have gaps (not all indexes used)</li>
+<li>should not be iterated by <code>for (e in array)</code></li>
+<li>has some handy methods (<code>push</code>, <code>pop</code>, <code>slice</code>, <code>sort</code>, ...)</li>
+<li><code>length</code> property means max(index)+1</li>
+<li>Array type-check is tricky (use library like underscore)</li>
+</ul>
+   </div>
+
+</div><div class="slide">
+
+<h1>Boolean Expressions</h1>
+<ul>
+<li>JavaScript behaves more like <strong>C</strong></li>
+<li>falsy values<ul>
+<li><code>false</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code> // BTW: can be changed :-(</li>
+<li><code>0</code></li>
+<li><code>&#39;&#39;</code> // empty string</li>
+<li><code>NaN</code> // Not a Number</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Function Declaration (1)</h1>
+<pre><code class="lang-javascript">function add(arg1, arg2) {
+  var result = arg1 + arg2;
+  return result;
+}
+
+add(3, 7);               // 10
+add(&#39;Jason&#39;, &#39; Bourne&#39;); // &#39;Jason Bourne&#39;
+add([1, 3], [7, 5]);     // &#39;1,37,5&#39;
+add.length;              // 2
+typeof add;              // &#39;function&#39;</code></pre>
+</div><div class="slide">
+
+<h1>Function Declaration (2)</h1>
+<pre><code class="lang-javascript">function add() {
+  var i, len, result = 0;
+  for (i = 0, len = arguments.length; i &lt; len; ++i) {
+    result += arguments[i];
+  }
+  return result;
+}
+
+add(3, 7, 4, 6);         // 20
+add.length;              // 0</code></pre>
+</div><div class="slide">
+
+<h1>Function Expression (1)</h1>
+<pre><code class="lang-javascript">typeof max;     // &#39;undefined&#39;
+typeof min;     // &#39;function&#39;
+
+var max = function (a, b) {
+  return a &gt; b ? a : b;
+};
+
+typeof max;     // &#39;function&#39;
+
+function min(a, b) { return a &lt; b ? a : b; }</code></pre>
+</div><div class="slide">
+
+<h1>Functions: 1st-Class Objects</h1>
+<pre><code class="lang-javascript">function jQuery() { /* ... */ }
+jQuery.browser = { /* ... */ };
+
+// used as function
+var $info = jQuery(&#39;#info&#39;);
+
+// used as object (holds ref to trim-function)
+jQuery.trim(&#39;  hi  &#39;);
+
+// click-function gets a function reference
+jQuery(&#39;#btnOk&#39;).click(function () { /* ... */ });</code></pre>
+</div><div class="slide">
+
+<h1>Scopes</h1>
+<ul>
+<li>function scope</li>
+<li>global scope</li>
+<li>don&#39;t pollute global namespace!</li>
+</ul>
+<p><br/>
+</p>
+<div style="color: #F20C68; font-size: 120%; line-height: 120%; padding: 1em; background-color: #FAF89B">&ldquo;In JavaScript there&#39;s no curly braces local scope; in other words, <strong>blocks don&#39;t create scope</strong>.&rdquo;</div>
+<div class="fs66" style="color: #888; margin-top: 0.5em"><strong>JavaScript Patterns</strong>, Stoyan Stefanov, O&#39;Reilly, 2010</div>
+
+</div><div class="slide">
+
+<h1>Module Pattern</h1>
+<pre><code class="lang-javascript">var MYKA = {}; // MYKA = my killer app
+
+MYKA.helper = function () { /* ... */ };
+
+// defining a new module (sub-namespace)
+MYKA.module1 = {
+  init: function () { /* ... */ },
+  reload: function () {}
+};
+
+MYKA.module1.Customer = function (){
+  // a constructor function
+};</code></pre>
+</div><div class="slide">
+
+<h1>IIFE</h1>
+<ul>
+<li>Immediately Invoked Function Expression</li>
+<li>anonymous function, executing once, creates new scope</li>
+</ul>
+<pre><code class="lang-javascript">(function() {
+  var local; // not visible outside
+
+  function helper() { /* I&#39;m private */ }
+
+  // do something
+})();</code></pre>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">(function() { /* ... */ })();
+(function() { /* ... */ }());</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Late Binding of &#39;this&#39;</h1>
+<pre><code class="lang-javascript"> var obj1 = {
+     name: &#39;Bourne&#39;,
+     getName: function () {return this.name;}
+   },
+   obj2 = {
+     name: &#39;Wombosi&#39;
+   },
+   getName = obj1.getName;
+
+ obj1.getName();     // Bourne
+ getName.call(obj2); // Wombosi
+ getName();          // undefined</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Inheritance</h1>
+<p><img src="media/javascript-inheritance-talking-animals.png" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Inheritance Patterns/Types</h1>
+<p>Many ways - too many ways to fall...
+
+</p>
+<br/><table class="fs75"><tr><td>
+
+<ul>
+<li>Constructor Pattern</li>
+<li>Prototype Pattern</li>
+<li>Combination Constructor/ Prototype Pattern</li>
+<li>Dynamic Prototype Pattern</li>
+<li>Parasitic Constructor Pattern</li>
+<li>Durable Constructor Pattern</li>
+</ul>
+</td><td style="padding-left: 1em">
+
+<ul>
+<li>Prototype Chaining</li>
+<li>Constructor Stealing</li>
+<li><strong>Combination Inheritance</strong></li>
+<li>Prototypal Inheritance</li>
+<li>Parasitic Inheritance</li>
+<li><span style="color:green">Parasitic Combination Inheritance</span></li>
+</ul>
+</td></tr></table>
+
+<p><span style="color: #aaa" class="fs66">see &quot;Professional JavaScript for Web Developers&quot;, Wrox Press</span>
+
+</p>
+</div><div class="slide">
+
+<h1>Constructor Function</h1>
+<pre><code class="lang-javascript">function LatLng(lat, lng) {
+  this.lat = lat;
+  this.lng = lng;
+}
+
+var myHome = new LatLng(47.8239, 12.0946);
+
+console.log(myHome);
+// { lat: 47.8239, lng: 12.0946 }</code></pre>
+</div><div class="slide">
+
+<h1>Member Functions</h1>
+<pre><code class="lang-javascript">LatLng.prototype.toString = function () {
+  return &#39;LatLng: &#39; + this.lat + &#39;;&#39; + this.lng;
+};
+
+LatLng.prototype.getLat = function () {
+  return this.lat;
+};
+
+LatLng.prototype.getLng = function () {
+  return this.lng;
+};</code></pre>
+</div><div class="slide">
+
+<h1>Subtype</h1>
+<h2>Combination Inheritance</h2>
+<pre><code class="lang-javascript">function POI(lat, lng, name) {
+  // Constructor Stealing
+  LatLng.call(this, lat, lng);
+  this.name = name;
+}
+
+POI.prototype = new LatLng(); // not the best way!
+
+// correct constructor pointer
+POI.prototype.constructor = POI;</code></pre>
+</div><div class="slide">
+
+<h1>Add / Override Methods</h1>
+<pre><code class="lang-javascript">// overrides LatLng::toString
+POI.prototype.toString = function () {
+  return &#39;POI: &#39; + this.name
+};
+
+// add new method
+POI.prototype.getName = function () {
+  return this.name
+};
+
+var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
+</div>
+
+<div class="slide">
+
+
+    <h1>Prototype Chain</h1>
+
+    <!-- Created with Inkscape (http://www.inkscape.org/) -->
+    <svg
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:cc="http://creativecommons.org/ns#"
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.2"
+            width="100%"
+            height="100%"
+            viewBox="0 0 800 600"
+            id="svg3004">
+  <defs
+     id="defs3006">
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Lend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         id="path3959"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="DotL"
+       style="overflow:visible">
+      <path
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)"
+         id="path4000"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none;marker-end:none" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata3010">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-62.722064,317.51507)"
+     id="layer1">
+    <rect
+       width="208.3412"
+       height="140.73512"
+       ry="0"
+       x="521.39575"
+       y="-214.21327"
+       id="rect3013"
+       style="fill:#ffeeaa;fill-opacity:1;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="m 521.37035,-187.51507 208.39537,0"
+       id="path3785"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 624.72206,-187.51507 0,113.680504"
+       id="path3787"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       x="71.381096"
+       y="131.75089"
+       id="text3805"
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="71.381096"
+         y="131.75089"
+         id="tspan3807" /></text>
+    <text
+       x="527.18152"
+       y="-194.37663"
+       id="text3809"
+       xml:space="preserve"
+       style="font-size:17.68550873px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="527.18152"
+         y="-194.37663"
+         id="tspan3811">LatLng.prototype</tspan><tspan
+         x="527.18152"
+         y="-172.26974"
+         id="tspan3813" /></text>
+    <text
+       x="529.0686"
+       y="-167.3744"
+       id="text3815"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="529.0686"
+         y="-167.3744"
+         id="tspan3817">__proto__</tspan><tspan
+         x="529.0686"
+         y="-148.00079"
+         id="tspan3819">constructor</tspan><tspan
+         x="529.0686"
+         y="-128.62718"
+         id="tspan3821">getLng</tspan><tspan
+         x="529.0686"
+         y="-109.25357"
+         id="tspan3823">getLat</tspan><tspan
+         x="529.0686"
+         y="-89.879959"
+         id="tspan3825">toString</tspan></text>
+    <rect
+       width="185.52435"
+       height="50.729614"
+       ry="0"
+       x="668.71173"
+       y="-307.92731"
+       id="rect3013-0"
+       style="fill:#ffeeaa;fill-opacity:1;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="m 668.68909,-284.63227 185.5726,0"
+       id="path3785-4"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 760.72206,-284.63227 0,27.1172"
+       id="path3787-5"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       x="668.70068"
+       y="-269.95566"
+       transform="scale(1.0102341,0.98986958)"
+       id="text3815-7"
+       xml:space="preserve"
+       style="font-size:13.66168594px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="668.70068"
+         y="-269.95566"
+         id="tspan3825-1">constructor</tspan></text>
+    <text
+       x="667.03729"
+       y="-293.59344"
+       transform="scale(1.0102341,0.98986958)"
+       id="text3809-9"
+       xml:space="preserve"
+       style="font-size:15.58910942px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="667.03729"
+         y="-293.59344"
+         id="tspan3811-8">Object.prototype</tspan><tspan
+         x="667.03729"
+         y="-274.10706"
+         id="tspan3813-8" /></text>
+    <text
+       x="759.93005"
+       y="-269.95566"
+       transform="scale(1.0102341,0.98986958)"
+       id="text3815-7-7"
+       xml:space="preserve"
+       style="font-size:13.66168594px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="759.93005"
+         y="-269.95566"
+         id="tspan3825-1-2">[native]</tspan></text>
+    <rect
+       width="208.28328"
+       height="154.12436"
+       ry="0"
+       x="384.75104"
+       y="-37.486107"
+       id="rect3013-9"
+       style="fill:#ffeeaa;fill-opacity:1;stroke:#000000;stroke-width:1.30792856;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="m 384.6966,-10.816867 208.39537,0"
+       id="path3785-2"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 488.04831,-10.745602 0,126.642732"
+       id="path3787-2"
+       style="fill:none;stroke:#000000;stroke-width:1.3193413;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       x="390.50778"
+       y="-17.678431"
+       id="text3809-5"
+       xml:space="preserve"
+       style="font-size:17.68550873px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="390.50778"
+         y="-17.678431"
+         id="tspan3811-6">POI.prototype</tspan><tspan
+         x="390.50778"
+         y="4.4284554"
+         id="tspan3813-0" /></text>
+    <text
+       x="392.39487"
+       y="9.3237972"
+       id="text3815-77"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="392.39487"
+         y="9.3237972"
+         id="tspan3817-6">__proto__</tspan><tspan
+         x="392.39487"
+         y="28.697409"
+         id="tspan3819-8">constructor</tspan><tspan
+         x="392.39487"
+         y="48.071018"
+         id="tspan3823-7">getName</tspan><tspan
+         x="392.39487"
+         y="67.444633"
+         id="tspan3825-13">toString</tspan></text>
+    <flowRoot
+       id="flowRoot5264"
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion5266"><rect
+           width="297.75882"
+           height="195.9445"
+           x="242.04909"
+           y="251.65422"
+           id="rect5268" /></flowRegion><flowPara
+         id="flowPara5270" /></flowRoot>    <rect
+       width="208.3412"
+       height="140.73512"
+       ry="0"
+       x="73.395859"
+       y="131.78671"
+       id="rect3013-9-4"
+       style="fill:#ffd5d5;fill-opacity:1;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="m 73.370354,160.48493 208.395366,0"
+       id="path3785-2-8"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 176.72206,160.48493 0,113.6805"
+       id="path3787-2-2"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       x="79.181564"
+       y="153.62337"
+       id="text3809-5-7"
+       xml:space="preserve"
+       style="font-size:17.68550873px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="79.181564"
+         y="153.62337"
+         id="tspan3811-6-2">saltys</tspan><tspan
+         x="79.181564"
+         y="175.73026"
+         id="tspan3813-0-6" /></text>
+    <text
+       x="81.068649"
+       y="180.48492"
+       id="text3815-77-4"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="81.068649"
+         y="180.48492"
+         id="tspan3817-6-8">__proto__</tspan><tspan
+         x="81.068649"
+         y="199.85854"
+         id="tspan3823-7-4">lat</tspan><tspan
+         x="81.068649"
+         y="219.23215"
+         id="tspan3825-13-9">lng</tspan><tspan
+         x="81.068649"
+         y="238.60576"
+         id="tspan5322">name</tspan></text>
+    <text
+       x="186.72206"
+       y="180.48492"
+       id="text3815-77-4-9"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="186.72206"
+         y="180.48492"
+         id="tspan3817-6-8-3" /><tspan
+         x="186.72206"
+         y="199.85854"
+         id="tspan3823-7-4-8">47.5872</tspan><tspan
+         x="186.72206"
+         y="219.23215"
+         id="tspan3825-13-9-9">-122.3777</tspan><tspan
+         x="186.72206"
+         y="238.60576"
+         id="tspan5322-7">'Saltys'</tspan></text>
+    <rect
+       width="208.3412"
+       height="60.000004"
+       ry="0"
+       x="73.395859"
+       y="-38.213287"
+       id="rect3013-9-3"
+       style="fill:#e5ff80;fill-opacity:1;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="m 73.370354,-11.51507 208.395366,0"
+       id="path3785-2-9"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 176.72206,-11.51507 0,33.301784"
+       id="path3787-2-0"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       x="79.181564"
+       y="-18.376648"
+       id="text3809-5-9"
+       xml:space="preserve"
+       style="font-size:17.68550873px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="79.181564"
+         y="-18.376648"
+         id="tspan3811-6-9">POI</tspan><tspan
+         x="79.181564"
+         y="3.730238"
+         id="tspan3813-0-2" /></text>
+    <text
+       x="79.509689"
+       y="8.6255798"
+       id="text3815-77-3"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="79.509689"
+         y="8.6255798"
+         id="tspan3825-13-1">prototype</tspan></text>
+    <rect
+       width="208.3412"
+       height="60.000004"
+       ry="0"
+       x="205.39586"
+       y="-214.2133"
+       id="rect3013-9-3-1"
+       style="fill:#e5ff80;fill-opacity:1;stroke:#000000;stroke-width:1.25;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       d="m 205.37035,-187.51507 208.39537,0"
+       id="path3785-2-9-4"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 308.72206,-187.51507 0,33.30178"
+       id="path3787-2-0-5"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       x="211.18156"
+       y="-194.37666"
+       id="text3809-5-9-3"
+       xml:space="preserve"
+       style="font-size:17.68550873px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="211.18156"
+         y="-194.37666"
+         id="tspan3811-6-9-4">LatLng</tspan><tspan
+         x="211.18156"
+         y="-172.26978"
+         id="tspan3813-0-2-7" /></text>
+    <text
+       x="211.50969"
+       y="-167.37442"
+       id="text3815-77-3-7"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="211.50969"
+         y="-167.37442"
+         id="tspan3825-13-1-5">prototype</tspan></text>
+    <path
+       d="m 160.08538,320.8111 c 74.91996,0 159.84992,-26.70528 159.84992,-26.70528"
+       transform="translate(62.722064,-317.51507)"
+       id="path5456"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 293.91676,145.35752 c 87.08644,0.64035 162.57718,-27.51149 162.57718,-27.51149"
+       transform="translate(62.722064,-317.51507)"
+       id="path5458"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 610.88581,143.4365 72.35859,0 c 0,0 51.86766,1.56607 52.83977,-80.922037"
+       transform="translate(62.722064,-317.51507)"
+       id="path5470"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 474.49306,321.45144 72.99893,0 c 0,0 53.78869,0 53.78869,-76.20064"
+       transform="translate(62.722064,-317.51507)"
+       id="path5472"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 160.72572,490.5016 196.58484,0.64034 c 0,0 34.97978,4.8338 35.62012,-55.03364"
+       transform="translate(62.722064,-317.51507)"
+       id="path5476"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 475.1334,340.02134 74.91996,0 c 0,0 60.19211,3.20172 60.83245,-38.42048 0.64034,-41.6222 -51.86767,-42.26255 -51.86767,-42.26255 l -442.47597,0 c 0,0 -6.40343,-3.20171 -5.12275,19.85059"
+       transform="translate(62.722064,-317.51507)"
+       id="path5478"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <path
+       d="m 672.9742,-153.2536 74.91996,0 c 0,0 60.19211,3.20172 60.83245,-38.42048 0.64034,-41.6222 -51.86767,-42.26255 -51.86767,-42.26255 l -440.55495,-0.64034 c 0,0 -4.50914,-2.56136 -7.54142,18.8321"
+       id="path5478-7"
+       style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#DotL);marker-mid:none;marker-end:url(#Arrow2Lend)" />
+    <text
+       x="633.88995"
+       y="-166.19383"
+       id="text3815-77-0"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="633.88995"
+         y="-166.19383"
+         id="tspan3817-6-4" /><tspan
+         x="633.88995"
+         y="-146.82022"
+         id="tspan3819-8-1" /><tspan
+         x="633.88995"
+         y="-127.44661"
+         id="tspan3823-7-5">[Function]</tspan><tspan
+         x="633.88995"
+         y="-108.073"
+         id="tspan3825-13-4">[Function]</tspan><tspan
+         x="633.88995"
+         y="-88.699387"
+         id="tspan6264">[Function]</tspan></text>
+    <text
+       x="497.52866"
+       y="10.504376"
+       id="text3815-77-0-7"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="497.52866"
+         y="10.504376"
+         id="tspan3817-6-4-8" /><tspan
+         x="497.52866"
+         y="29.877987"
+         id="tspan3819-8-1-0" /><tspan
+         x="497.52866"
+         y="49.251598"
+         id="tspan3823-7-5-7">[Function]</tspan><tspan
+         x="497.52866"
+         y="68.625214"
+         id="tspan6264-6">[Function]</tspan></text>
+    <text
+       x="390.78293"
+       y="86.361618"
+       id="text3815-77-6"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="390.78293"
+         y="86.361618"
+         id="tspan3817-6-0">lat</tspan><tspan
+         x="390.78293"
+         y="105.73523"
+         id="tspan3825-13-47">lng</tspan></text>
+    <text
+       x="497.39999"
+       y="86.361618"
+       id="text3815-77-6-5"
+       xml:space="preserve"
+       style="font-size:15.49888897px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="497.39999"
+         y="86.361618"
+         id="tspan3817-6-0-7">undefined</tspan><tspan
+         x="497.39999"
+         y="105.73523"
+         id="tspan3825-13-47-7">undefined</tspan></text>
+  </g>
+</svg>
+</div>
+
+<div class="slide">
+
+<h1>Inheritance Summary</h1>
+<ul>
+<li>Combination Inheritance (explained above)<ul>
+<li><span style="color: green">&uarr; easy to understand</span></li>
+<li><span style="color: green">&uarr; Constructor w/ parameters</span></li>
+<li><span style="color: red">&darr; Constructor is called twice</span></li>
+<li><span style="color: red">&darr; shadowed properties</span></li>
+</ul>
+</li>
+</ul>
+<p><br/>
+
+</p>
+<ul>
+<li>Parasitic Combination Inheritance is slightly better</li>
+<li>ECMAScript 5 comes w/ <code>Object.create</code> method</li>
+<li>Search the Web ...</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Diff JavaScript - Java</h1>
+<ul>
+<li>Example:</li>
+<li><code>DoubleMetaphone.java</code></li>
+<li><code>doublemetaphone.js</code></li>
+</ul>
+<p><br/>
+
+</p>
+<div style="color:#aaa">
+
+<p>See code-snippets/java
+
+</p>
+<p><br/>
+
+</p>
+<ul>
+<li>Maven <code>commons-codec:commons-codec:1.5</code></li>
+<li>npm package <code>doublemetaphone</code></li>
+</ul>
+</div>
+
+</div>
+
+<div class="slide">
+
+<h1>Pitfalls</h1>
+<p><img src="media/danger-sign_w725_h544.jpg" class="scaled-centered">
+
+</p>
+  <div class="handout">
+
+<ul>
+<li>JavaScript has quite a lot flaws in design</li>
+<li>Everybody coding JavaScript should know them</li>
+<li>There are some ways around them</li>
+</ul>
+  </div>
+
+</div><div class="slide">
+
+<h1>Pitfall #1 - globals</h1>
+<pre><code class="lang-javascript">for (i = 0; i &lt; 10; ++i) { /* ... */ }</code></pre>
+<ul>
+<li><code>i</code> is actually <code>window.i</code> (a property of the global object <code>window</code>)</li>
+<li>Everybody can access and manipulate this value</li>
+</ul>
+<p><br/>
+
+</p>
+<h3>Guide</h3>
+<ul>
+<li>Always use <code>var</code> on top of scope (function)</li>
+<li>use JSLint, JSHint, yui-compressor, NetBeans, IntelliJ, ...</li>
+<li>Don&#39;t use <code>for(var i=0; ...</code> - this is misleading</li>
+</ul>
+</div><div class="slide">
+
+<h1>Pitfall #2 - hoisting</h1>
+<pre><code class="lang-javascript">console.log(typeof a);  // &#39;undefined&#39;
+console.log(typeof c);  // &#39;undefined&#39;
+
+a = &#39;Wombosi&#39;;
+console.log(typeof a);  // &#39;string&#39;
+
+if (false) {
+  var a, b;             // (!) unreachable code (!)
+}
+
+console.log(b); // undefined
+console.log(c); // ReferenceError: c is not defined</code></pre>
+</div><div class="slide">
+
+<h1>Pitfall #3 - type coercion</h1>
+<ul>
+<li><code>==</code> and <code>!=</code> do type coercion</li>
+</ul>
+<pre><code class="lang-javascript">7 == &quot;7&quot;     // true
+1 == true    // true</code></pre>
+<p><br/><br/>
+
+</p>
+<p><strong>Solution: use strict equals <code>===</code> and <code>!==</code> </strong>
+
+</p>
+<pre><code class="lang-javascript">7 === &quot;7&quot;     // false
+1 === true    // false</code></pre>
+</div><div class="slide">
+
+<h1>Pitfall #4 - this</h1>
+<pre><code class="lang-javascript">var obj = {
+  name: &#39;Jason Bourne&#39;,
+  printLater: function () {
+    setTimeout(function () {
+      console.log(this.name);
+    }, 1000);
+  }
+};
+obj.printLater(); // logs undefined</code></pre>
+<p><strong>this</strong> does not point to <code>obj</code>!
+
+</p>
+</div><div class="slide">
+
+<h1>Pitfall #4 - this -&gt; self</h1>
+<pre><code class="lang-javascript">var obj = {
+  name: &#39;Jason Bourne&#39;,
+  printLater: function () {
+    var self = this; // sometimes that | me
+
+    setTimeout(function () {
+      console.log(self.name);
+    }, 1000);
+  }
+};
+obj.printLater(); // logs Jason Bourne</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Pitfall - Numbers</h1>
+<pre><code class="lang-javascript">1/10 + 2/10            // 0.30000000000000004
+1 / 0                  // Infinity
+isFinite(1 / 0)        // false
+Math.pow(2, 1023)      // 8.98846567431158e+307
+Math.pow(2, 1024)      // Infinity
+Number.MAX_VALUE       // 1.7976931348623157e+308</code></pre>
+<ul>
+<li>All Numbers are 64-Bit floating point values</li>
+<li>Don&#39;t expect Exceptions</li>
+</ul>
+</div><div class="slide">
+
+<h1>Pitfall - Number Parsing</h1>
+<pre><code class="lang-javascript">parseInt(&#39;077&#39;)        // 63   (!) -&gt; octal value
+parseInt(&#39;080&#39;)        // 0    (!) -&gt; parse error
+parseInt(&#39;080&#39;, 10)    // 80
+parseInt(&#39;80abc&#39;, 10)  // 80   (!)
+Number(&#39;80abc&#39;)        // NaN
+parseInt(&#39;Jason&#39;)      // NaN
+isNaN(Number(&#39;Jason&#39;)) // true</code></pre>
+<ul>
+<li>use <code>parseInt(str, 10 /* radix */)</code></li>
+<li>check if it is really a Number <code>!isNaN(n)</code></li>
+<li>Don&#39;t expect Exceptions</li>
+</ul>
+  <div class="handout">
+
+<pre><code class="lang-javascript">parseInt(&#39;ZZ&#39;, 36) === 36 * 36 - 1    // true
+Number(36 * 36 - 1).toString(36);     // &#39;zz&#39;</code></pre>
+  </div>
+
+</div><div class="slide">
+
+<h1>Pitfall - ASI</h1>
+<ul>
+<li>ASI = Automatic Semicolon Insertion</li>
+</ul>
+<pre><code class="lang-javascript">return
+{
+   a: true
+}
+
+// behaves like ...
+return; // = return undefined;
+{
+   a: true
+}; // code not reachable -&gt; garbage collected</code></pre>
+</div><div class="slide">
+
+<h1>Pitfall - forget new</h1>
+<pre><code class="lang-javascript">jQuery.Event = function( src, props ) {
+  // Allow instantiation without the &#39;new&#39; keyword
+  if ( !(this instanceof jQuery.Event) ) {
+    return new jQuery.Event( src, props );
+  }
+
+  // ...
+};</code></pre>
+</div><div class="slide">
+
+<h1>Other Pitfalls</h1>
+<ul>
+<li>Side-Effects of closures, e.g. creating functions in a loop</li>
+<li>Enumerating properties - use <code>hasOwnProperty</code></li>
+<li><code>with</code> - don&#39;t ever use it!</li>
+<li><code>eval</code> - be careful</li>
+<li><code>new Function</code> - rarly necessary</li>
+<li>&quot;enhancing&quot; Prototypes of String, Object, Function, ...</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Fighting Pitfalls</h1>
+<ul>
+<li>use a <strong>Lint</strong> program (see later)</li>
+<li>declare strict mode with <a href="https://developer.mozilla.org/en/JavaScript/Strict_mode">&quot;use strict&quot;</a></li>
+<li>learn JavaScript<ul>
+<li>scopes, functions, closures</li>
+<li>operators, some patterns</li>
+<li>learn how to avoid globals</li>
+</ul>
+</li>
+<li>invest in an excellent IDE (ideally from <a href="http://www.jetbrains.com/">JetBrains</a>)</li>
+<li>comment your API with <a href="http://code.google.com/p/jsdoc-toolkit/">JSDoc Toolkit</a></li>
+<li>consider using <a href="http://coffeescript.org/">CoffeeScript</a> (compiles to JavaScript)
+<br/><span class="fs66" style="color: #888">&ldquo;I don&#39;t like it - it is completely different and has no C-like {}...&rdquo;</span></li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Tools</h1>
+<ul>
+<li>Editors</li>
+<li>Debugging</li>
+<li>Quality (Static Code Analyzers)</li>
+<li>Efficiency (Minification, Concatenation)</li>
+</ul>
+</div><div class="slide">
+
+<h1>JetBrains IDEs</h1>
+<ul>
+<li>IntelliJ IDEA, WebStorm, PhpStorm</li>
+<li>very intelligent JavaScript editor</li>
+<li>Debugger (Chrome, Firefox, Node.js)</li>
+<li>Syntax Highlighting, Lint-Integration</li>
+<li>Formatting, Refactoring</li>
+</ul>
+<p><br/>
+
+</p>
+<p><strong>Demo?</strong>
+
+</p>
+</div><div class="slide">
+
+<h1>Browser Tools</h1>
+<h2>Integrated</h2>
+<ul>
+<li>FireFox FireBug Plugin</li>
+<li>Chrome/Safari WebInspector (Shift+Ctrl+I)</li>
+<li>IE FireBug lite (or Microsoft Script Debugger)</li>
+</ul>
+<p><br/>
+
+</p>
+<p><strong>Demo?</strong>
+
+</p>
+</div><div class="slide">
+
+<h1>JSHint (Static Code Analysis)</h1>
+<pre><code class="lang-javascript">/*jshint latedef:true, curly:true*/
+a = &#39;Wombosi&#39;;
+if (/bos/.test(a))
+    a += &#39;!&#39;;
+var a;</code></pre>
+<p><br/><ul class="jshint-errors">
+</p>
+<p><li><p>Line 4: <code>  a += &#39;!&#39;;</code></p><p>Expected &#39;{&#39; and instead saw &#39;a&#39;.</p></li>
+</p>
+<p><li><p>Line 5: <code>var a;</code></p><p>&#39;a&#39; was used before it was defined.</p></li>
+</ul>
+
+</p>
+</div><div class="slide">
+
+<h1>JSLint global declaration</h1>
+<pre><code class="lang-javascript">/*global jQuery*/
+
+(function( $ ){
+
+    // do something with $
+    // ($ is local var for global jQuery)
+    // BTW jQuery is a property of window
+
+})( jQuery );</code></pre>
+</div><div class="slide">
+
+<h1>JSHint and Alternatives</h1>
+<ul>
+<li><a href="http://code.google.com/p/wro4j/">wro4j</a> - Web Resource Optimizer for Java</li>
+<li>JSHint (<a href="http://www.jshint.com/">http://www.jshint.com/</a>)<ul>
+<li>has more (relaxing) options than JSLint</li>
+<li>more freedom in coding style</li>
+</ul>
+</li>
+<li>JSLint (<a href="http://www.jslint.com/">http://www.jslint.com/</a>)<ul>
+<li>the original, very strict, fewer options</li>
+<li>aligns with the book &quot;JavaScript: The Good Parts&quot;</li>
+</ul>
+</li>
+<li><a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a> with special options</li>
+<li><a href="https://developers.google.com/closure/compiler/">Closure Compiler</a> with special options or <code>gjslint</code></li>
+</ul>
+</div><div class="slide">
+
+<h1>JSHint in Java/Maven</h1>
+<div style="background-color: #000; color:#fff; font-family: monospace; padding: 0.5em;" class="fs66">
+<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">plugin</span><span style="color: #00ffff">&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">groupId</span><span style="color: #00ffff">&gt;</span>ro.isdc.wro4j<span style="color: #00ffff">&lt;/groupId&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">artifactId</span><span style="color: #00ffff">&gt;</span>wro4j-maven-plugin<span style="color: #00ffff">&lt;/artifactId&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">executions</span><span style="color: #00ffff">&gt;&lt;</span><span style="color: #00ffff">execution</span><span style="color: #00ffff">&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">id</span><span style="color: #00ffff">&gt;</span>wro-lint<span style="color: #00ffff">&lt;/id&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">phase</span><span style="color: #00ffff">&gt;</span>generate-resources<span style="color: #00ffff">&lt;/phase&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">goals</span><span style="color: #00ffff">&gt;&lt;</span><span style="color: #00ffff">goal</span><span style="color: #00ffff">&gt;</span><span style="color: #000; background-color: #48F542">jshint</span><span style="color: #00ffff">&lt;/goal&gt;&lt;/goals&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;</span><span style="color: #00ffff">configuration</span><span style="color: #00ffff">&gt;</span>...<span style="color: #00ffff">&lt;/configuration&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #00ffff">&lt;/execution&gt;&lt;/executions&gt;</span><br>
+<span style="color: #00ffff">&lt;/plugin&gt;</span><br>
+</div>
+
+</div><div class="slide">
+
+<h1>JS[HL]int IDE Integration</h1>
+<ul>
+<li>IntelliJ IDEA (or WebStorm or PhpStorm)<ul>
+<li>JSLint and JSHint included</li>
+<li>Many other very useful JavaScript options</li>
+</ul>
+</li>
+<li>Eclipse<ul>
+<li><a href="http://marketplace.eclipse.org/content/jslint-eclipse-plugin">JSLint Eclipse Plugin</a></li>
+<li><a href="http://github.eclipsesource.com/jshint-eclipse/">JSHint Eclipse Plugin</a></li>
+</ul>
+</li>
+<li>NetBeans<ul>
+<li><a href="http://plugins.netbeans.org/plugin/40893/jslint">JSLint Plugin for NetBeans</a></li>
+<li>Has a very viable JavaScript Editor and Options</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Debugging Proxies</h1>
+<ul>
+<li><a href="http://www.charlesproxy.com">Charles</a> <br/>
+<span class="fs50">HTTP proxy, monitor, Reverse Proxy; enables a developer to view HTTP/HTTPS traffic</span></li>
+<li><a href="http://www.fiddler2.com/fiddler2/version.asp">Fiddler</a> Web Debugging Proxy</li>
+</ul>
+</div><div class="slide">
+
+<h1>jsFiddle (Example)</h1>
+<div style="background: url('media/jsfiddle-example.png') no-repeat center center; height: 100%"></div>
+
+</div><div class="slide">
+
+<h1>jsFiddle</h1>
+  <div style="background: url('media/jsfiddle-logo.png') no-repeat right top; height: 100%">
+
+<ul>
+<li><a href="http://jsfiddle.net/">http://jsfiddle.net/</a></li>
+<li>JsFiddle is a playground for web developers</li>
+<li>JavaScript, HTML, CSS</li>
+<li>Ideal for submitting bugs / request help</li>
+<li>You can share and embed a fiddle:<ul>
+<li><a href="http://jsfiddle.net/Ua93g/1/">http://jsfiddle.net/Ua93g/1/</a></li>
+<li><code>&lt;iframe src=&quot;http://jsfiddle.net/...&quot;/&gt;</code></li>
+</ul>
+</li>
+</ul>
+  </div>
+
+</div><div class="slide">
+
+<h1>console</h1>
+<p>Poor man&#39;s debugger :-;
+
+</p>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">var a = [1, 9], b = {name: &#39;Bourne&#39;};
+
+console.log(&#39;a&#39;, a, &#39;b&#39;, b);
+// a [ 1, 9 ] b { name: &#39;Bourne&#39; }
+
+console.error(&#39;No more beer&#39;);</code></pre>
+  <div class="handout">
+
+<p>Links
+ <em> DailyJS - Mastering Console Logging <a href="http://dailyjs.com/2012/02/02/console/">http://dailyjs.com/2012/02/02/console/</a>
+ </em> Mozilla Developer Network / console <a href="https://developer.mozilla.org/en/DOM/console">https://developer.mozilla.org/en/DOM/console</a>
+
+</p>
+  </div>
+
+</div><div class="slide">
+
+<h1>console: old browsers</h1>
+<ul>
+<li>Not available in miserable browsers (IE &lt;= 8)</li>
+</ul>
+<pre><code class="lang-javascript">if (typeof console === &#39;undefined&#39;) {
+  (function(global) {
+    var nop = function(){};
+    global.console = {
+      log: nop, info: nop, error: nop,
+      dir: nop, time: nop, timeEnd: nop
+    };
+  }(window));
+}</code></pre>
+</div>
+
+
+<div class="slide">
+
+<h1>Testing</h1>
+<table class="info">
+<thead>
+<tr><th>Either ...</th><th>... or?</th></tr>
+</thead>
+<tbody>
+<tr><td>Real Browser Tests</td><td>Phantom.js, Zombie.js, ...</td></tr>
+<tr><td>synchronous</td><td>asynchronous</td></tr>
+<tr><td>Unit-Test</td><td>Integration-Test</td></tr>
+<tr><td>Browser JS</td><td>Rhino, Node, ...</td></tr>
+<tr><td>Manually</td><td>Automated</td></tr>
+</tbody>
+</table>
+
+<p><br/>
+
+</p>
+<ul>
+<li>Some frameworks support &#39;Browser only&#39;, &#39;Node.js only&#39; or both</li>
+<li>Support for <a href="http://en.wikipedia.org/wiki/Test-Driven_Development">Test Driven Development (TDD)</a>,
+<a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development">Behavior Driven Development (BDD)</a>,
+<a href="http://testanything.org/wiki/index.php/Main_Page">Test Anything Protocol (TAP)</a></li>
+</ul>
+</div><div class="slide">
+
+<h1>Testing-Tools</h1>
+<h2>Integration Tests</h2>
+<ul>
+<li><a href="http://seleniumhq.org/">SeleniumHQ</a></li>
+<li><a href="http://casperjs.org/">CasperJS</a> (based on <a href="http://phantomjs.org/">PhantomJS</a>; WebKit only!)</li>
+</ul>
+<p><br/>
+
+</p>
+<h2>Unit-Testing</h2>
+<ul>
+<li><a href="http://visionmedia.github.com/mocha/">mocha</a> (successor of expresso)</li>
+<li><a href="http://pivotal.github.com/jasmine/">Jasmine</a></li>
+<li><a href="http://docs.jquery.com/QUnit">QUnit</a></li>
+<li>many more ...</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Assertion Libraries</h1>
+<ul>
+<li><a href="https://github.com/LearnBoost/expect.js">expect.js</a> (see example below)</li>
+<li><a href="http://github.com/visionmedia/should.js">should.js</a></li>
+<li><a href="http://chaijs.com/">chai</a> supports BDD, TDD and assert.* style</li>
+</ul>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">expect(window.r).to.be(undefined);
+expect({ a: &#39;b&#39; }).to.eql({ a: &#39;b&#39; })
+expect(5).to.be.a(&#39;number&#39;);
+expect([]).to.be.an(&#39;array&#39;);
+expect(window).not.to.be.an(Image);</code></pre>
+</div><div class="slide">
+
+<h1>Mock / Spy / Stubs</h1>
+<ul>
+<li><a href="http://sinonjs.org/">Sinon.js</a> (see example below)</li>
+<li><a href="http://jsmockito.org/">JSMockito</a></li>
+<li>many more, e.g. Google Closure Library goog.testing.*</li>
+</ul>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">var callback = sinon.stub();
+callback.withArgs(42).returns(1);
+callback.withArgs(1).throws(&quot;TypeError&quot;);
+
+callback(); // No return value, no exception
+callback(42); // Returns 1
+callback(1); // Throws TypeError</code></pre>
+</div><div class="slide">
+
+<h1>Demo: mocha / expect.js</h1>
+<div style="color: #aaa">see code-snippets/javascript/inheritance-test.js</div>
+
+<p><br/>
+
+</p>
+<ul>
+<li>Install mocha globally with <code>npm</code> (see node.js slides):</li>
+</ul>
+<pre><code>$ npm install mocha -g</code></pre>
+<p><br/>
+
+</p>
+<ul>
+<li>Run tests with different options</li>
+</ul>
+<p><br/>
+
+</p>
+<pre><code>$ mocha inheritance-test.js
+$ mocha --reporter spec *-test.js
+$ mocha --watch --growl *-test.js</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>JavaScript in Facelets (1)</h1>
+<ul>
+<li>Facelets are XML</li>
+<li>JavaScript is not always valid XML (&gt;, &lt;, &amp;)</li>
+<li>Browser should be able to detect the scripts</li>
+</ul>
+<p><br/>&rArr;<br/><br/>
+
+</p>
+<ul>
+<li><p>use CDATA-Section (recommended)</p>
+<p>or</p>
+</li>
+<li><p>encode <code>&lt;</code> <code>&gt;</code> <code>&amp;</code> with <code>&amp;lt;</code> <code>&amp;gt;</code> <code>&amp;amp;</code></p>
+</li>
+</ul>
+</div><div class="slide">
+
+<h1>JavaScript in Facelets (2)</h1>
+<pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+// &lt;![CDATA[
+
+  if ($.browser.msie &amp;&amp;
+      parseInt($.browser.version, 10) &lt;= 11) {
+    alert(&#39;Wrong browser!&#39;);
+  }
+
+// ]]&gt;
+&lt;/script&gt;</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Efficiency / Performance</h1>
+<p>Concatenate and minify js files!
+
+</p>
+<ul>
+<li><a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a></li>
+<li><a href="https://github.com/mishoo/UglifyJS">UglifyJS</a></li>
+<li><a href="https://developers.google.com/closure/compiler/">Closure Compiler</a></li>
+<li><a href="http://www.crockford.com/javascript/jsmin.html">JSMin</a></li>
+<li>For Java Projects: <strong><a href="http://code.google.com/p/wro4j/wiki/MavenPlugin">wro4j-maven-plugin</a></strong></li>
+</ul>
+<p><br/>
+
+</p>
+<p>Consider using <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD</a>
+
+</p>
+<div style="padding-left: 2em; padding-top: 0.5em; color: #888" class="fs66">The Asynchronous Module Definition (AMD) API specifies a mechanism for defining modules such that the module and its dependencies can be asynchronously loaded.</div>
+
+</div><div class="slide">
+
+<h1>Example: uglify-js</h1>
+<pre><code class="lang-javascript">(function (window, undefined) {
+    var myString = &#39;Wombosi&#39;;
+    if (/bos/.test(myString)) {
+        myString += &#39;!&#39;;
+    }
+    if (window.wom === undefined) {
+        window.wom = myString;
+    }
+}(window));</code></pre>
+<pre><code class="lang-javascript">(function(e,t){var n=&quot;Wombosi&quot;;/bos/.test(n) ↵
+&amp;&amp;(n+=&quot;!&quot;),e.wom===t&amp;&amp;(e.wom=n)})(window);</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>jQuery Examples</h1>
+<div class="fs50" style="color: #888; margin-bottom: 0.5em">From: <a href="http://github.com/rmurphey/jqfundamentals">jQuery Fundamentals</a> by Rebecca Murphey</div>
+
+<pre><code class="lang-javascript">$(&#39;#menu li&#39;).hover(function() {
+    $(this).toggleClass(&#39;hover&#39;);
+});</code></pre>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">$(&#39;div.funtimes&#39;).animate(
+    {
+        left : [ &quot;+=50&quot;, &quot;swing&quot; ],
+        opacity : [ 0.25, &quot;linear&quot; ]
+    },
+    300
+);</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>jQuery Mobile - head</h1>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;link href=&quot;jquery.mobile-1.1.0.css&quot;
+          rel=&quot;stylesheet&quot;/&gt;
+    &lt;script src=&quot;jquery-1.7.1.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;jquery.mobile-1.1.0.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;my-application.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+</div><div class="slide">
+
+<h1>jQuery Mobile - body</h1>
+<pre><code>&lt;section id=&quot;home&quot; data-role=&quot;page&quot;&gt;
+  &lt;header data-role=&quot;header&quot;&gt;
+    &lt;h1&gt;nerdshow rc&lt;/h1&gt;
+  &lt;/header&gt;
+  &lt;div data-role=&quot;content&quot;&gt;
+    &lt;a data-role=&quot;button&quot; href=&quot;#&quot;
+       data-icon=&quot;arrow-r&quot; id=&quot;btn-next&quot;&gt;
+      Next&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id=&quot;help&quot; data-role=&quot;page&quot;&gt;
+...
+&lt;/section&gt;</code></pre>
+</div><div class="slide">
+
+<h1>jQuery Mobile - code</h1>
+<pre><code class="lang-javascript">$(&#39;#home&#39;).live(&#39;pagebeforecreate&#39;, function() {
+    $.mobile.showPageLoadingMsg();
+    myapp.load(function (error) {
+        $.mobile.hidePageLoadingMsg();
+        if (error) {alert(error);}
+    });
+    // ...
+});
+// connect behavior to form elements
+$(function () {
+    $(&#39;#btn-next&#39;).click(function () {
+        myapp.nextSlide();
+    });
+});</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Reading</h1>
+<h2>Internet</h2>
+<ul>
+<li><a href="http://www.munichjs.org/learn-js/">http://www.munichjs.org/learn-js/</a></li>
+</ul>
+<p><br>
+
+</p>
+<h2>Books</h2>
+<ul>
+<li><strong>JavaScript: The Good Parts</strong>, <br/>
+Douglas Crockford, O&#39;Reilly, 2008</li>
+<li><strong>JavaScript Patterns</strong>, <br/>
+Stoyan Stefanov, O&#39;Reilly, 2010</li>
+<li>(Many more books, a lot of good resources online)</li>
+</ul>
+</div>
+<div class="slide">
+
+<h1>Book Lottery</h1>
+<p><img src="media/crockford-the-good-parts.jpg" class="scaled-centered">
+
+</p>
+</div>
+
+<div class="slide">
+
+<h1>Questions?</h1>
+<p><img src="media/questions.jpg" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Thank you!</h1>
+<pre><code class="lang-javascript">// my mail address
+&#39;hgoebl+goebl.com&#39;.replace(&#39;+&#39;, &#39;@&#39;)</code></pre>
+<table><tr><td>
+
+<ul>
+<li>Slides <br/>
+<a href="http://goebl.com/slides/">goebl.com/slides</a></li>
+<li>Github <br/>
+<a href="https://github.com/hgoebl">github.com/hgoebl</a><br/>
+<br/></li>
+<li>Presentation software: <br/>
+<a href="https://github.com/hgoebl/nerdshow">github.com/hgoebl/nerdshow</a></li>
+</ul>
+</td><td style="padding-left: 1em">
+
+<p><img src="media/goebl-com-slides.qrcode.png" class="scaled-centered">
+
+</p>
+</td></tr></table>
+
+</div>
+
+<div class="slide">
+<h1>Backup</h1>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="100%"
+   height="100%"
+   viewBox="0 0 442.85714 442.85714"
+   id="svg0"
+   sodipodi:version="0.32"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="Octagon_delete2.svg">
+  <metadata
+     id="metadata2478">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="1001"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="166.65793"
+     inkscape:cy="197.91585"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="g3189"
+     showguides="true"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2434"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 28 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="56 : 28 : 1"
+       inkscape:persp3d-origin="28 : 18.666667 : 1"
+       id="perspective3068" />
+    <linearGradient
+       x1="42.986301"
+       y1="7.0127001"
+       x2="22.0144"
+       y2="51.987099"
+       id="fieldGradient"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         id="stop7"
+         style="stop-color:#f54c4c;stop-opacity:1;"
+         offset="0" />
+      <stop
+         offset="0.5"
+         style="stop-color:#ba1313;stop-opacity:1;"
+         id="stop4626" />
+      <stop
+         id="stop9"
+         style="stop-color:#9a1919;stop-opacity:1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="54.509937"
+       y1="41.179295"
+       x2="9.5471001"
+       y2="16.248501"
+       id="edgeGradient"
+       gradientUnits="userSpaceOnUse"
+       xlink:href="#fieldGradient"
+       gradientTransform="translate(0,380.85714)"
+       spreadMethod="pad">
+      <stop
+         id="stop12"
+         style="stop-color: rgb(154, 18, 18); stop-opacity: 1;"
+         offset="0" />
+      <stop
+         id="stop14"
+         style="stop-color: rgb(211, 62, 62); stop-opacity: 1;"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#fieldGradient"
+       id="linearGradient3187"
+       gradientUnits="userSpaceOnUse"
+       x1="42.986301"
+       y1="7.0127001"
+       x2="22.0144"
+       y2="51.987099"
+       gradientTransform="translate(0,380.85714)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#fieldGradient"
+       id="linearGradient3199"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,380.85714)"
+       x1="23.661627"
+       y1="15.996979"
+       x2="61.426567"
+       y2="57.237244" />
+    <filter
+       inkscape:collect="always"
+       id="filter4622">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="5.7897656"
+         id="feGaussianBlur4624" />
+    </filter>
+    <linearGradient
+       xlink:href="#fieldGradient-6"
+       gradientUnits="userSpaceOnUse"
+       id="edgeGradient-0"
+       y2="16.248501"
+       x2="9.5471001"
+       y1="41.179295"
+       x1="54.509937"
+       spreadMethod="pad">
+      <stop
+         offset="0"
+         style="stop-color: rgb(154, 18, 18); stop-opacity: 1;"
+         id="stop12-8" />
+      <stop
+         offset="1"
+         style="stop-color: rgb(211, 62, 62); stop-opacity: 1;"
+         id="stop14-6" />
+    </linearGradient>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="fieldGradient-6"
+       y2="51.987099"
+       x2="22.0144"
+       y1="7.0127001"
+       x1="42.986301">
+      <stop
+         offset="0"
+         style="stop-color: rgb(255, 175, 175); stop-opacity: 1;"
+         id="stop7-2" />
+      <stop
+         offset="1"
+         style="stop-color: rgb(227, 19, 19); stop-opacity: 1;"
+         id="stop9-2" />
+    </linearGradient>
+    <inkscape:perspective
+       id="perspective4790"
+       inkscape:persp3d-origin="28 : 18.666667 : 1"
+       inkscape:vp_z="56 : 28 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 28 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#fieldGradient-6"
+       id="linearGradient4809"
+       gradientUnits="userSpaceOnUse"
+       x1="42.986301"
+       y1="7.0127001"
+       x2="22.0144"
+       y2="51.987099" />
+  </defs>
+  <path
+     style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#777777;fill-opacity:0.79607843;fill-rule:nonzero;stroke:none;stroke-width:0;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter4622);enable-background:accumulate;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+     d="m 139.03794,29.08482 c -36.50151,37.181539 -73.854239,73.83087 -110.593745,110.90625 0,54.35417 0,108.70833 0,163.0625 37.211122,37.00656 74.336895,74.10191 111.281245,111.375 54.46875,0 108.9375,0 163.40625,0 36.94435,-37.27308 74.0701,-74.36846 111.28125,-111.375 0,-54.35417 0,-108.70833 0,-163.0625 -37.03948,-37.26228 -74.41143,-74.194114 -111.34375,-111.5625 -54.47917,0 -108.95832,0 -163.4375,0 l -0.59375,0.65625 z m 154.9375,21.34375 c 32.82292,32.822917 65.64583,65.64583 98.46875,98.46875 0,48.34375 0,96.6875 0,145.03125 -32.83333,32.83333 -65.66667,65.66667 -98.5,98.5 -48.34375,0 -96.6875,0 -145.03125,0 -32.83332,-32.83333 -65.666662,-65.66667 -98.499995,-98.5 0,-48.34375 0,-96.6875 0,-145.03125 32.822917,-32.82292 65.645825,-65.645833 98.468745,-98.46875 48.36458,0 96.72918,0 145.09375,0 z"
+     id="path4047"
+     transform="matrix(0.94264722,0,0,0.94264722,21.556691,21.556688)" />
+  <g
+     id="g3189"
+     transform="matrix(7,0,0,7,4.42857,-2661.5714)">
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="field"
+       d="m 57,422.85714 -15,15 -22,0 -15,-15 0,-22 15,-15 22,0 15,15 0,22 z"
+       style="fill:url(#linearGradient3199);fill-opacity:1;stroke:#870000;stroke-width:0.47448979000000002;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt" />
+    <g
+       id="g3707"
+       transform="matrix(0.94655284,0,0,0.94655284,-81.834237,393.38733)">
+      <g
+         id="g_STOP"
+         transform="matrix(0.08654416,0,0,0.08654416,42.81744,-14.676093)">
+        <path
+           style="fill:#ffffff;stroke:none"
+           id="text_S"
+           d="m 736.597,447.6 c 0,9.481 -1.677,18.329 -5.027,26.535 -3.351,8.203 -7.974,15.313 -13.87,21.325 -5.894,6.01 -12.715,10.815 -20.462,14.392 -7.748,3.585 -16.13,5.379 -25.148,5.379 -10.173,0 -19.304,-1.964 -27.393,-5.898 -8.089,-3.931 -14.911,-9.241 -20.458,-15.946 -5.552,-6.702 -9.828,-14.453 -12.835,-23.239 -3.005,-8.783 -4.508,-17.921 -4.508,-27.394 h 32.598 c 0,4.855 0.633,9.651 1.904,14.389 1.27,4.738 3.235,9.015 5.894,12.829 2.659,3.82 6.016,6.881 10.059,9.194 4.049,2.31 8.959,3.465 14.738,3.465 4.397,0 8.616,-0.924 12.665,-2.771 4.046,-1.847 7.513,-4.392 10.403,-7.631 2.888,-3.237 5.199,-6.992 6.929,-11.27 1.734,-4.277 2.599,-8.733 2.599,-13.359 0,-6.702 -1.387,-12.653 -4.159,-17.852 -2.772,-5.198 -7.627,-10.458 -14.561,-15.778 -1.159,-1.161 -1.621,-1.797 -1.388,-1.911 0.233,-0.117 -0.46,-0.753 -2.08,-1.903 -1.618,-1.158 -5.029,-3.41 -10.233,-6.766 -5.205,-3.357 -13.7,-9.075 -25.49,-17.161 -9.477,-6.476 -16.585,-14.051 -21.327,-22.723 -4.741,-8.668 -7.112,-18.206 -7.112,-28.606 0,-8.323 1.504,-16.127 4.51,-23.408 3.005,-7.281 7.224,-13.697 12.658,-19.248 5.434,-5.547 11.733,-9.881 18.902,-13.006 7.167,-3.121 14.911,-4.682 23.227,-4.682 8.329,0 16.016,1.503 23.069,4.509 7.052,3.005 13.178,7.167 18.376,12.487 5.201,5.319 9.361,11.68 12.485,19.075 3.121,7.4 4.8,15.491 5.032,24.273 h -31.91 c -0.456,-8.092 -3.231,-14.563 -8.318,-19.421 -5.086,-4.852 -11.331,-7.28 -18.735,-7.28 -7.624,0 -14.097,2.543 -19.413,7.63 -5.317,5.089 -7.976,11.445 -7.976,19.071 0,5.778 1.504,10.635 4.51,14.565 3.004,3.93 8.782,8.32 17.334,13.175 22.43,12.948 38.788,26.124 49.076,39.531 10.29,13.414 15.435,28.554 15.435,45.429 l 0,0 z" />
+        <path
+           style="fill:#ffffff;stroke:none"
+           id="text_T"
+           d="M 820.199,309.515 V 511.523 H 786.478 V 309.515 h -42.423 v -30.95 H 862.62 v 30.95 h -42.421 z" />
+        <path
+           style="fill:#ffffff;stroke:none"
+           id="text_O"
+           d="m 1010.584,394.7 c 0,17.825 -0.982,32.984 -2.946,45.487 -1.97,12.497 -5.385,24.308 -10.254,35.421 -5.79,13.887 -13.022,24.015 -21.696,30.379 -8.683,6.364 -19.621,9.548 -32.815,9.548 -13.89,0 -25.176,-3.184 -33.856,-9.548 -8.686,-6.364 -15.915,-16.493 -21.703,-30.379 -4.862,-11.348 -8.273,-23.214 -10.24,-35.597 -1.968,-12.383 -2.955,-27.486 -2.955,-45.311 0,-17.591 0.986,-32.694 2.955,-45.313 1.967,-12.616 5.378,-24.48 10.24,-35.593 6.017,-13.889 13.369,-23.902 22.052,-30.039 8.683,-6.134 19.852,-9.201 33.507,-9.201 13.418,0 24.417,3.066 32.983,9.201 8.566,6.137 15.739,16.384 21.529,30.738 2.316,5.785 4.342,11.574 6.08,17.358 1.735,5.787 3.131,11.862 4.174,18.225 1.035,6.366 1.789,13.196 2.257,20.49 0.456,7.292 0.688,15.336 0.688,24.134 l 0,0 z m -31.945,0 c 0,-6.487 -0.179,-12.387 -0.519,-17.712 -0.352,-5.324 -0.812,-10.241 -1.395,-14.754 -0.575,-4.516 -1.328,-8.856 -2.255,-13.02 -0.926,-4.164 -1.967,-8.33 -3.125,-12.499 -3.011,-10.42 -6.775,-17.944 -11.283,-22.575 -4.517,-4.629 -10.246,-6.946 -17.19,-6.946 -14.358,0 -24.191,9.608 -29.515,28.821 -2.779,8.797 -4.69,17.649 -5.731,26.563 -1.035,8.912 -1.56,19.848 -1.56,32.811 0,6.253 0.173,11.984 0.525,17.196 0.346,5.212 0.804,10.07 1.384,14.584 0.58,4.517 1.331,8.97 2.263,13.368 0.924,4.397 1.964,8.909 3.119,13.535 5.324,19.213 15.156,28.825 29.515,28.825 6.945,0 12.673,-2.313 17.19,-6.942 4.509,-4.632 8.273,-11.928 11.283,-21.883 1.384,-4.626 2.542,-9.076 3.468,-13.362 0.938,-4.277 1.682,-8.733 2.257,-13.368 0.578,-4.632 0.982,-9.545 1.214,-14.757 0.238,-5.214 0.355,-11.174 0.355,-17.885 l 0,0 z" />
+        <path
+           style="fill:#ffffff;stroke:none"
+           id="text_P"
+           d="m 1158.399,345.048 c 0,21.681 -5.073,38.182 -15.218,49.496 -10.145,11.317 -24.699,16.973 -43.647,16.973 h -34.785 V 515.476 H 1032.64 V 278.565 h 66.895 c 8.694,0 16.666,1.593 23.915,4.775 7.246,3.182 13.493,7.663 18.73,13.442 5.243,5.774 9.252,12.79 12.042,21.041 2.785,8.249 4.177,17.326 4.177,27.225 l 0,0 z m -31.437,0 c 0,-9.9 -2.676,-17.916 -8.027,-24.043 -5.354,-6.129 -12.383,-9.192 -21.077,-9.192 h -33.108 v 67.181 h 33.108 c 9.367,10e-4 16.554,-2.946 21.577,-8.842 5.016,-5.895 7.527,-14.262 7.527,-25.104 l 0,0 z" />
+      </g>
+    </g>
+  </g>
+</svg>
+<div class="fs50">taken from: <a href="http://rationalwiki.org/wiki/File:Stop_sign.svg">http://rationalwiki.org/ (Creative Commons Licensed)</a></div>
+</div>
+
+
+<div class="slide">
+
+<h1>switch - not like Java!</h1>
+<pre><code class="lang-javascript">var i, c = 3,
+    f = function() { return 2; };
+
+for (i = 1; i &lt;= 3; ++i) {
+  switch (i) {
+    case 1:   console.log(&#39;1&#39;); break;
+    case f(): console.log(&#39;2&#39;); break;
+    case c:   console.log(&#39;3&#39;); break;
+    default:  console.log(&#39;?&#39;); break;
+  }
+}</code></pre>
+</div><div class="slide">
+
+<h1>Exception Handling (1)</h1>
+<pre><code class="lang-javascript">try {
+  fn();           // fn is not defined anywhere
+}
+catch (e) {
+  console.log(e); // [ReferenceError: fn is not defined]
+  console.log(e.type);     // not_defined
+  console.log(e.message);  // fn is not defined
+}
+finally {
+  console.log(&#39;finally&#39;);
+}</code></pre>
+</div><div class="slide">
+
+<h1>Exception Handling (2)</h1>
+<pre><code class="lang-javascript">throw {
+  type: &#39;...&#39;,
+  message: &#39;...&#39;
+};
+
+throw Error(&#39;Bei mia is ois kabutt&#39;);</code></pre>
+</div><div class="slide">
+
+<h1>console: measuring time</h1>
+<pre><code class="lang-javascript">var i;
+console.time(&#39;myHeavyLoop&#39;);
+for (i = 0; i &lt; 100000; i++) {
+  ;
+}
+console.timeEnd(&#39;myHeavyLoop&#39;);
+// myHeavyLoop: 12ms</code></pre>
+</div><div class="slide" data-expert-level="5">
+
+<h1>Pitfall - function in loop</h1>
+<ul>
+<li>Functions are Closures!</li>
+</ul>
+<pre><code class="lang-javascript">var i, nums = [];
+for (i = 0; i &lt; 10; i++) {
+  nums[i] = function (j) {
+    return i + j;
+  };
+}
+
+nums[0](2); // Prints 12 instead of 2
+// example from www.jshint.com/options/</code></pre>
+</div><div class="slide" data-expert-level="5">
+
+<h1>Pitfall - function in loop</h1>
+<p>Solution: copy the value of <code>i</code>
+
+</p>
+<pre><code class="lang-javascript">var i, nums = [];
+for (i = 0; i &lt; 10; i++) {
+  (function (i) {
+    nums[i] = function (j) {
+      return i + j;
+    }
+  }(i));
+}
+// example from www.jshint.com/options/</code></pre>
+</div><div class="slide">
+
+<h1>Documentation</h1>
+<ul>
+<li><a href="http://jashkenas.github.com/docco/">http://jashkenas.github.com/docco/</a> (literate-programming-style documentation generator)</li>
+<li><a href="http://code.google.com/p/jsdoc-toolkit/">http://code.google.com/p/jsdoc-toolkit/</a> jsdoc-toolkit - A documentation generator for JavaScript</li>
+</ul>
+</div><div class="slide">
+
+<h1>Content Delivery Networks</h1>
+<ul>
+<li><a href="https://developers.google.com/speed/libraries/">Google Ajax Libraries</a></li>
+<li><a href="http://www.asp.net/ajaxlibrary/cdn.ashx">Microsoft Ajax Content Delivery Network</a></li>
+<li><a href="http://code.jquery.com/">jQuery CDN</a></li>
+<li><a href="http://aws.amazon.com/cloudfront/">Amazon’s CloudFront CDN</a></li>
+<li><a href="http://www.cdnjs.com/">http://www.cdnjs.com/</a></li>
+<li>Don&#39;t use source repositories (svn/...)</li>
+</ul>
+</div><div class="slide">
+
+<h1>Boolean Expressions (2)</h1>
+<pre><code class="lang-javascript">function f(o) {
+  if (o &amp;&amp; o.prop) {
+    // use o.prop
+  }
+}</code></pre>
+<p>Java is type-safe but more verbose:
+
+</p>
+<pre><code class="lang-java">public void f(MyObj o) {
+  if (o != null &amp;&amp; o.getProp() != null) {
+    // use it
+  }
+}</code></pre>
+</div><div class="slide">
+
+<h1>Conclusions (1)</h1>
+<ul>
+<li>JavaScript does not support block scope</li>
+<li><p>use single <code>var</code> statement on top of scope</p>
+</li>
+<li><p>forget about <code>with</code></p>
+</li>
+<li><p>forget about <code>eval</code></p>
+</li>
+<li><p>check <code>hasOwnProperty</code> when doing <code>for(e in obj)</code></p>
+</li>
+</ul>
+</div><div class="slide">
+
+<h1>Conclusions (2)</h1>
+<ul>
+<li><p>use <code>===</code> and <code>!==</code>, avoid <code>==</code> and <code>!=</code></p>
+</li>
+<li><p>be very careful with (omitting) semicolons</p>
+</li>
+<li>use a lint program (or an IDE plugin)</li>
+<li>don&#39;t use <code>new Array</code> and <code>new Object</code></li>
+</ul>
+</div>
+
+
+</div>
+<script>
+    window.hijs = '.lang-javascript';
+</script>
+<script src="http://hgoebl.github.com/nerdshow/rt/hijs/hijs.js"></script>
+<script>
+
+    $(function () {
+        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.com/nerdshow/rt/hijs/my-hijs.css"/>').appendTo('head');
+    });
+
+</script>
+</body>
+</html>

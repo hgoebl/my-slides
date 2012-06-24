@@ -1,0 +1,23 @@
+{
+    "name": "code-snippets",
+    "version": "0.0.1",
+    "private": true,
+    "author": "Heinrich Göbl <hgoebl@goebl.com> (http://goebl.com/)",
+    "description": "Some example code snippets (JavaScript, Node)",
+    "dependencies": {
+        "mysql": "*",
+        "async": "*",
+        "seq": "*",
+        "mocha": "*",
+        "expect.js": "*",
+        "pin": "*",
+        "socket.io": ">= 0.9.6",
+        "express": ">= 2.5.x",
+        "jsdom": "*"
+    },
+    "devDependencies": {
+    },
+    "engines": {
+        "node": "*"
+    }
+}

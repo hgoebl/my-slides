@@ -1,0 +1,35 @@
+<script src="media/jquery.tagcanvas.1.17.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#myCanvas').css({
+            width: $('#myCanvasContainer').innerWidth() + 'px',
+            height: $('#myCanvasContainer').innerHeight() + 'px'
+        });
+        if(!$('#myCanvas').tagcanvas({
+            textColour: '#ff0000',
+            outlineColour: '#ff00ff',
+            reverse: true,
+            depth: 0.8,
+            maxSpeed: 0.05
+        })) {
+            $('#myCanvasContainer').html('An error occurred (tagcanvas)!');
+        }
+    });
+</script>
+
+<div class="slide">
+    <h1>Community Modules</h1>
+
+    <div id="myCanvasContainer" style="min-width: 98%; min-height: 98%">
+        <canvas width="600" height="480" id="myCanvas">
+            <p>Your browser does not support the canvas element</p>
+            <ul>
+                <li><a href="http://www.google.com" target="_blank">Google</a></li>
+                <li><a href="/fish">Fish</a></li>
+                <li><a href="/chips">Chips</a></li>
+                <li><a href="/salt">Salt</a></li>
+                <li><a href="/vinegar">Vinegar</a></li>
+            </ul>
+        </canvas>
+    </div>
+</div>

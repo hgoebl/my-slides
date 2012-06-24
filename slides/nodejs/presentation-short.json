@@ -1,0 +1,32 @@
+{
+    "title": "Node.js - an Overview",
+    "author": "Heinrich Göbl",
+    "company": "www.goebl.com",
+    "footer_left": "--no-footer--",
+    "footer_right": "hgoebl &#8226; 2012",
+    "theme": "advanced",
+    "transitions": "no",
+    "source": [
+        "00-nodejs-overview.md",
+        "10-node-basics.md",
+        "20-core-modules.md",
+        "30-programming-style.md",
+        "40-npm.md",
+        "50-community-modules.md",
+        "60-connect-express.md",
+        "70-socket.io.md",
+        "90-conclusion.md",
+        "95-reading.md",
+        "99-end.md",
+        "B0-backup-stop-here.html",
+        "21-core-modules-net.md",
+        "31-programming-style-seq.md",
+        "62-node-jade.md",
+        "80-tools.md",
+        "85-hosting-operations.md"
+    ],
+    "sourceEncoding": "utf8",
+    "template": "s5",
+    "nerdshow-folder": "/nerdshow",
+    "destination": "index.html"
+}

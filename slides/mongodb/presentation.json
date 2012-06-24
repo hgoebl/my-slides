@@ -1,0 +1,30 @@
+{
+    "title": "MongoDB - Introduction",
+    "author": "Heinrich Göbl",
+    "company": "www.goebl.com",
+    "footer_left": "--no-footer--",
+    "footer_right": "hgoebl &#8226; 2012",
+    "theme": "advanced",
+    "transitions": "no",
+    "source": [
+        "00-mongodb.md",
+        "05-intro.md",
+        "06-intro-more.md",
+        "10-basics.md",
+        "12-projection-sort-limit.md",
+        "20-manipulate.md",
+        "30-aggregation.md",
+        "40-run-command.md",
+        "50-map-reduce.md",
+        "60-indexes.md",
+        "70-tools.md",
+        "80-scalability.md",
+        "95-reading.md",
+        "96-credits.md",
+        "99-end.md"
+    ],
+    "sourceEncoding": "utf8",
+    "template": "s5",
+    "nerdshow-folder": "/nerdshow",
+    "destination": "index.html"
+}

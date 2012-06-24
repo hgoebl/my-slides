@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random#</title>
+    <script type="text/javascript" src="http://localhost:8008/nerdshow/jquery/jquery-1.7.1.min.js"></script>
+    <style type="text/css">
+        #result {
+            font-size: 1000%;
+            font-family: "Lucida Sans", monospace;
+            padding: 30pt;
+            margin-top: 10pt;
+            background-color: inherit;
+        }
+        #result.ready {
+            background-color: #81bc1f
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span>Number from 1 to ...</span><input type="number" id="max" value="20"/><button id="run">Run</button>
+</div>
+<div id="result">?</div>
+<script type="text/javascript">
+
+    if (typeof $ !== 'function') {
+        alert('jQuery not loaded - local nerdshow server not running?');
+    }
+
+    $(function () {
+
+        function getRandomInt (min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        $('#run').click(function () {
+            var max = parseInt($('#max').val(), 10),
+                $result = $('#result'),
+                count = getRandomInt(10, 20),
+                intervalId;
+
+            $result.removeClass('ready');
+            intervalId = setInterval(function () {
+                var result;
+
+                if (count-- <= 0) {
+                    clearInterval(intervalId);
+                    $result.addClass('ready');
+                    return;
+                }
+
+                result = '' + getRandomInt(1, max);
+                if (result.length === 1) {
+                    result = '0' + result;
+                }
+                $result.text(result);
+            }, 500);
+        });
+    });
+
+</script>
+</body>
+</html>

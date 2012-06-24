@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>MongoDB - Introduction</title>
+    <meta name="generator" content="github.com/hgoebl/nerdshow"/>
+    <meta name="version" content="S5 1.3"/>
+    <meta name="author" content="Heinrich Göbl"/>
+    <meta name="company" content="www.goebl.com"/>
+    <!-- extensions -->
+    <meta name="transitions" content="no"/>
+    <script src="http://hgoebl.github.com/nerdshow/rt/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="http://hgoebl.github.com/nerdshow/rt/s5/ui/common/s5.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://hgoebl.github.com/nerdshow/rt/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
+    <style>
+        img.scaled-centered {
+            max-width:100%;
+            max-height:100%;
+            display:block;
+            margin:auto;
+        }
+        table.info {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            margin:auto;
+            width: 80%;
+            text-align: left;
+            border-collapse: collapse;
+            border: 1px solid #69c;
+        }
+        table.info th {
+            padding: 12px 17px 12px 17px;
+            font-weight: normal;
+            color: #039;
+            border-bottom: 1px dashed #69c;
+        }
+        table.info td {
+            padding: 7px 17px 7px 17px;
+            color: #669;
+        }
+        table.info tbody tr:hover td {
+            color: #339;
+            background: #d0dafd;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <div id="header"></div>
+    <!-- div id="footer">
+        <h1>--no-footer--</h1>
+
+        <h2>hgoebl &#8226; 2012</h2>
+    </div -->
+    <div class="topleft"></div>
+    <div class="topright"></div>
+    <div class="bottomleft"></div>
+    <div class="bottomright"></div>
+</div>
+<div class="presentation">
+
+    <div class="slide">
+
+<h1>MongoDB</h1>
+<h2>A Short Introduction</h2>
+<h3>Heinrich Göbl</h3>
+<h4>www.goebl.com</h4>
+</div><div class="slide" style="">
+
+<h1>About me</h1>
+<table><tr><td>
+
+<ul>
+<li>Heinrich Göbl</li>
+<li>Day job as JEE programmer at <a href="http://www.agenda-software.de/">AGENDA Software GmbH</a></li>
+<li>Focus on Java EE</li>
+<li><span style="color: #277633; font-weight: bold">&ldquo;Sorry, no production experience w/ MongoDB&rdquo;</span></li>
+</ul>
+</td><td style="padding-left: 1em">
+
+<p><img src="media/hgoebl-480x480.jpg" class="scaled-centered">
+
+</p>
+</td></tr></table>
+
+</div>
+
+<div class="slide">
+
+<h1>What is MongoDB?</h1>
+<ul>
+<li>Document Oriented</li>
+<li>Horizontally Scalable</li>
+<li>High Performance</li>
+<li>Operational Datastore</li>
+</ul>
+   <div class="handout">
+
+<h2>Focus of MongoDB</h2>
+<ul>
+<li>Create a full-featured data store</li>
+<li>that is scalable,</li>
+<li>flexible</li>
+<li>and fast</li>
+</ul>
+<p><br><br><span style="color: #AAA">(from: MongoDB The Definitive Guide, O&#39;Reilly)</span>
+
+</p>
+   </div>
+
+</div><div class="slide">
+
+<h1>Some facts</h1>
+<ul>
+<li>Programmed in C++</li>
+<li>Open Source (available on GitHub)</li>
+<li>GNU APGL licensed</li>
+<li>Runs on Linux, MacOS, Windows, ...</li>
+<li>Developed by 10gen (<a href="http://www.10gen.com/">http://www.10gen.com/</a>)<ul>
+<li>Professional Support</li>
+<li>First Class Documentation</li>
+</ul>
+</li>
+</ul>
+</div><div class="slide">
+
+<h1>Database Landscape</h1>
+<p><img src="media/mongo-db-landscape.png" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Terminology</h1>
+<table class="info">
+<thead>
+<tr><th>RDBMS</th><th>Mongo</th></tr>
+</thead>
+<tbody>
+<tr><td>Table</td><td>Collection</td></tr>
+<tr><td>Row(s)</td><td>BSON Document</td></tr>
+<tr><td>Column</td><td>BSON Field</td></tr>
+<tr><td>Index</td><td>Index</td></tr>
+<tr><td>Join</td><td>Embedded Document</td></tr>
+<tr><td>Partition</td><td>Shard</td></tr>
+<tr><td>Partition Key</td><td>Shard Key</td></tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="slide">
+
+<h1>Philosophy</h1>
+<ul>
+<li>Scaling out (horizontally) is easier than scaling up (vertically)</li>
+<li>Data files are Memory mapped (Memory is managed by OS)</li>
+<li>Writes are &quot;fire-and-forget&quot; by default (safe-mode=off)</li>
+<li>Store and marshal BSON (binary JSON)</li>
+<li>A lot of work is delegated to Clients (drivers)</li>
+</ul>
+</div><div class="slide">
+
+<h1>Data to Big Data</h1>
+<p><img src="media/mongo-data-to-big-data.png" class="scaled-centered">
+
+</p>
+</div>
+
+<div class="slide">
+
+<h1>Document Data Model</h1>
+<pre><code class="lang-javascript">var book = {
+  title: &#39;MongoDB: The Definitive Guide&#39;,
+  authors: [
+    { lastName: &#39;Chodorow&#39;, firstName: &#39;Kristina&#39; },
+    { lastName: &#39;Dirolf&#39;, firstName: &#39;Michael&#39; }
+  ],
+  tags: [&#39;NoSQL&#39;, &#39;Database&#39;, &#39;BigData&#39;, &#39;Programming&#39;],
+  pages: 195,
+  published: 2010
+};</code></pre>
+</div><div class="slide">
+
+<h1>Insert</h1>
+<pre><code class="lang-javascript">db.books.save(book);
+
+// primary key &#39;_id&#39;
+// generated by client driver
+// e.g. 4fba97070f318c1e73763350
+
+book._id;</code></pre>
+</div><div class="slide">
+
+<h1>Simple Queries 1</h1>
+<pre><code class="lang-javascript">db.books.find(); // find all
+
+// get count of all docs
+db.books.count();
+db.books.find().count();
+
+// find by primary key (_id)
+db.books.findOne({
+    _id: ObjectId(&quot;4fba97190f318c1e73763353&quot;)
+});</code></pre>
+</div><div class="slide">
+
+<h1>Simple Queries 2</h1>
+<pre><code class="lang-javascript">db.books.find({ title: &#39;JavaScript Patterns&#39; });
+
+db.books.find({ title: /^MongoDB/ });
+
+db.books.find({ title: /^MongoDB/,   // and
+                pages: {$gt: 200} });</code></pre>
+</div><div class="slide">
+
+<h1>Query Deep Structures</h1>
+<pre><code class="lang-javascript">db.books.find({
+  &#39;authors.lastName&#39;: &#39;Katz&#39;});
+db.books.find({
+  &#39;authors.lastName&#39;:
+    {$in: [&#39;Katz&#39;, &#39;McCaw&#39;]} });
+db.books.find({
+  $or: [
+    {&#39;authors.lastName&#39;: &#39;Katz&#39;},
+    {&#39;authors.lastName&#39;: &#39;McCaw&#39;}
+  ]});</code></pre>
+</div><div class="slide">
+
+<h1>Query Multivalued Fields</h1>
+<pre><code class="lang-javascript">db.books.find({authors: {$size:2} });
+
+db.books.find(
+  { tags: &#39;Programming&#39; });
+
+db.books.find({
+  tags: {$all: [&#39;Programming&#39;,
+                &#39;JavaScript&#39;]}
+  });</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Projection, Sort, Limit</h1>
+<pre><code class="lang-javascript">db.books.
+    find({/* all */},
+    {title: 1, pages: 1}).
+    sort({title: 1}).
+    limit(4);</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Update</h1>
+<pre><code class="lang-javascript">db.books.update({title: /Good Parts/},
+                {$inc: {pages: 3}});
+
+db.books.update({title: /in Action/},
+    {$set: {publisher: &#39;Manning&#39;}},
+    false, true);
+
+db.books.update({},
+    {$addToSet: {tags: &#39;Programming&#39;}},
+    false, true);</code></pre>
+</div><div class="slide">
+
+<h1>Delete</h1>
+<pre><code class="lang-javascript">db.books.remove({_id: mybook._id});
+
+db.books.remove({tags: &#39;Cooking&#39;});
+
+db.books.remove(); // truncate col</code></pre>
+   <div class="handout">
+
+<pre><code class="lang-javascript">db.books.remove({/* ... */}, {$atomic:true});
+// blocking!</code></pre>
+   </div>
+
+</div>
+
+<div class="slide">
+
+<h1>count, distinct, group</h1>
+<pre><code class="lang-javascript">db.runCommand({count: &#39;books&#39;,
+               query: {published: 2012}});
+
+db.runCommand({distinct: &#39;books&#39;, key:&#39;tags&#39;});
+
+db.runCommand({group: {
+    ns: &#39;books&#39;,
+    key: { published: true },
+    $reduce: function (obj, prev) {
+        prev.pages += obj.pages;
+    },
+    initial: { pages: 0 }
+}});</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>runCommand</h1>
+<pre><code class="lang-javascript">db.runCommand({ dropDatabase: 1 });
+
+db.runCommand({ getLastError: 1 });
+
+db.runCommand({ serverStatus: 1 });
+
+db.runCommand({ shutdown: 1 });</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Map-Reduce</h1>
+<ul>
+<li>batch processing of data</li>
+<li>aggregation operations</li>
+<li>replacement for <code>GROUP BY</code> in SQL</li>
+<li>invoked via a database command:</li>
+</ul>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">db.runCommand({ mapreduce: &#39;collection_name&#39;,
+    map: my_map_function,
+    reduce: my_reduce_function /*, ...*/});</code></pre>
+</div><div class="slide">
+
+<h1>Sample Document</h1>
+<pre><code class="lang-javascript">{ &quot;title&quot;: &quot;MongoDB in Action&quot;,
+  &quot;authors&quot;: [
+    { &quot;lastName&quot;: &quot;Banker&quot;,
+      &quot;firstName&quot;: &quot;Kyle&quot; }
+  ],
+  &quot;tags&quot;: [ &quot;NoSQL&quot;, &quot;Database&quot;, &quot;Programming&quot; ],
+  &quot;pages&quot;: 311
+}</code></pre>
+</div><div class="slide">
+
+<h1>map function</h1>
+<ul>
+<li>analyze one document (bound to <code>this</code>)</li>
+<li>emit(key, object_with_aggregated_values)</li>
+</ul>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">var map = function () {
+  var doc = this;
+  doc.tags.forEach(function (tag) {
+    emit(tag, { pages: doc.pages });
+  });
+};</code></pre>
+</div><div class="slide">
+
+<h1>reduce function</h1>
+<ul>
+<li>aggregate many emits to one</li>
+<li>created output must be structured like input</li>
+</ul>
+<p><br/>
+
+</p>
+<pre><code class="lang-javascript">var reduce = function (key, values) {
+    var result = { pages: 0 };
+    values.forEach(function (value) {
+        result.pages += value.pages;
+    });
+    return result;
+};</code></pre>
+</div><div class="slide">
+
+<h1>Map-Reduce Example</h1>
+<pre><code class="lang-javascript">var map = function () {
+        var doc = this;
+        doc.tags.forEach(function (tag) {
+            emit(tag, { pages: doc.pages });
+        });
+    }, reduce = function (key, values) {
+        var result = { pages: 0 };
+        values.forEach(function (value) {
+            result.pages += value.pages;
+        });
+        return result;
+    };
+db.books.mapReduce(map, reduce, {out: {inline: 1}});</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Indexes</h1>
+<pre><code class="lang-javascript">db.books.ensureIndex({&quot;title&quot;: 1}, {unique: true});
+
+db.books.ensureIndex({&quot;authors.lastName&quot;: 1});
+
+db.books.ensureIndex({&quot;tags&quot;: 1});
+
+db.books.getIndexes();
+
+db.books.dropIndex(&#39;title_1&#39;);</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Import / Export</h1>
+<pre><code>mongoexport -d test -c books &gt; mongo.books.txt
+
+mongo test --eval &quot;db.books.remove()&quot;
+
+mongoimport -d test -c books --file books.txt
+
+mongoexport -d test -c books --jsonArray &gt; books.json
+mongoimport -d test -c books --jsonArray &lt; books.json</code></pre>
+</div>
+
+<div class="slide">
+
+<h1>Replica Sets</h1>
+<p><img src="media/mongo-replicaset-1.png" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Replica Sets</h1>
+<p><img src="media/mongo-replicaset-2.png" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Replica Sets</h1>
+<p><img src="media/mongo-replicaset-3.png" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Replica Sets</h1>
+<p><img src="media/mongo-replicaset-4.png" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Sharding</h1>
+<p><img src="media/mongo-sharding-1.png" class="scaled-centered">
+
+</p>
+   <div class="handout">
+
+<h2>MongoS</h2>
+<p><img src="media/mongo-sharding-2.png" class="scaled-centered">
+
+</p>
+   </div>
+
+</div>
+
+<div class="slide">
+
+<h1>Reading</h1>
+<h2>Internet</h2>
+<ul>
+<li><a href="http://www.mongodb.org/">http://www.mongodb.org/</a></li>
+</ul>
+<p><br>
+
+</p>
+<h2>Books</h2>
+<ul>
+<li><strong>MongoDB - The Definitive Guide</strong>, <br/>
+Kristina Chodorow &amp; Michael Dirolf, O&#39;Reilly, 2010</li>
+<li><strong>MongoDB in Action</strong>, <br/>
+Kyle Banker, Manning Publications, 2012</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Credits</h1>
+<ul>
+<li>Thanks to 10gen (the company behind MongoDB)<ul>
+<li>Jared Rosoff - most graphics come from his presentation (MongoDB Tech Intro, 2010)</li>
+<li>Renaud Viel - Account Manager</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="slide">
+
+<h1>Questions?</h1>
+<p><img src="media/questions.jpg" class="scaled-centered">
+
+</p>
+</div><div class="slide">
+
+<h1>Thank you!</h1>
+<pre><code class="lang-javascript">// my mail address
+&#39;hgoebl+goebl.com&#39;.replace(&#39;+&#39;, &#39;@&#39;)</code></pre>
+<table><tr><td>
+
+<ul>
+<li>Slides <br/>
+<a href="http://goebl.com/slides/">goebl.com/slides</a></li>
+<li>Github <br/>
+<a href="https://github.com/hgoebl">github.com/hgoebl</a><br/>
+<br/></li>
+<li>Presentation software: <br/>
+<a href="https://github.com/hgoebl/nerdshow">github.com/hgoebl/nerdshow</a></li>
+</ul>
+</td><td style="padding-left: 1em">
+
+<p><img src="media/goebl-com-slides.qrcode.png" class="scaled-centered">
+
+</p>
+</td></tr></table>
+
+</div>
+
+
+</div>
+<script>
+    window.hijs = '.lang-javascript';
+</script>
+<script src="http://hgoebl.github.com/nerdshow/rt/hijs/hijs.js"></script>
+<script>
+
+    $(function () {
+        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.com/nerdshow/rt/hijs/my-hijs.css"/>').appendTo('head');
+    });
+
+</script>
+</body>
+</html>
