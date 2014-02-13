@@ -16,9 +16,9 @@
 .<table><tr><td>
 
  * Heinrich Göbl
- * Day job as JEE programmer at [AGENDA Software GmbH](http://www.agenda-software.de/)
+ * IT-Freelancer (Architecture, Software-Development)
  * Focus on Java EE
- * <span style="color: #277633; font-weight: bold">&ldquo;Sorry, no production experience w/ MongoDB&rdquo;</span>
+ * <span style="color: #277633; font-weight: bold">&ldquo;MongoDB is the backend db for my Android apps&rdquo;</span>
 
 .</td><td style="padding-left: 1em">
 

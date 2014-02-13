@@ -15,7 +15,7 @@
 .<table><tr><td>
 
  * Heinrich Göbl
- * Day job as JEE programmer at [AGENDA Software GmbH](http://www.agenda-software.de/)
+ * IT-Freelancer (Architecture, Software-Development)
  * Focus on Java EE
  * <span style="color: #277633; font-weight: bold">&ldquo;Node.js rocks!&rdquo;</span>
 

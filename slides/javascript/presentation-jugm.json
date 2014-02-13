@@ -8,6 +8,7 @@
     "transitions": "no",
     "source": [
         "00-javascript-for-javadev.md",
+        "03-jugm-survey.md",
         "05-intro.md",
         "10-basics.md",
         "11-basics-more.md",
@@ -29,6 +30,7 @@
         "80-jquery.md",
         "82-jquery-mobile.md",
         "95-reading.md",
+        "98-book-lottery.md",
         "99-end.md",
         "B0-backup-stop-here.html",
         "B1-backup.md"

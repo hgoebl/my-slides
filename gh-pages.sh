@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DEST=../my-slides@gh-pages
-RT=http://hgoebl.github.com/nerdshow/rt
+RT=http://hgoebl.github.io/nerdshow/rt
 
 # generate slides for gh-pages and copy to branch
 nerdshow-generate slides/javascript/presentation.json --nerdshow-folder $RT --no-socketio-enabled --no-zoom-enabled
