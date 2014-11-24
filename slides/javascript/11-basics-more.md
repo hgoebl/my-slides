@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Arrays
 
@@ -26,7 +25,6 @@ typeof array;        // 'object'
 
 .   </div>
 
-.</div><div class="slide">
 
 # Boolean Expressions
 
@@ -39,4 +37,3 @@ typeof array;        // 'object'
    * ``''`` // empty string
    * ``NaN`` // Not a Number
 
-.</div>

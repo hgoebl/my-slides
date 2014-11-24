@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Object Literals
 
@@ -15,7 +14,6 @@ var obj = {
 };
 ```
 
-.</div><div class="slide">
 
 # Objects
 
@@ -33,7 +31,6 @@ delete obj.prop;
 obj.prop;         // undefined
 ```
 
-.</div><div class="slide">
 
 # JSON
 
@@ -70,4 +67,3 @@ true
 
 .   </div>
 
-.</div>

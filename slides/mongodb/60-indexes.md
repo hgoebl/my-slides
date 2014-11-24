@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Indexes
 
@@ -14,4 +13,3 @@ db.books.getIndexes();
 db.books.dropIndex('title_1');
 ```
 
-.</div>

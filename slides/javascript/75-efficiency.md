@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Efficiency / Performance
 
@@ -16,7 +15,6 @@ Consider using [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)
 
 <div style="padding-left: 2em; padding-top: 0.5em; color: #888" class="fs66">The Asynchronous Module Definition (AMD) API specifies a mechanism for defining modules such that the module and its dependencies can be asynchronously loaded.</div>
 
-.</div><div class="slide">
 
 # Example: uglify-js
 
@@ -37,4 +35,3 @@ Consider using [AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)
 &&(n+="!"),e.wom===t&&(e.wom=n)})(window);
 ```
 
-.</div>

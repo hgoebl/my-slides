@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Reading
 
@@ -16,4 +15,3 @@
     Stoyan Stefanov, O'Reilly, 2010
   * (Many more books, a lot of good resources online)
 
-.</div>

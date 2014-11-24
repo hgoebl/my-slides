@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Node Hosting
 
@@ -7,4 +6,3 @@
  * [nodejitsu](http://www.nodejitsu.com/) Node.js clouds. PaaS
  * There are more ...
 
-.</div>

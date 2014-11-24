@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Map-Reduce
 
@@ -15,7 +14,7 @@ db.runCommand({ mapreduce: 'collection_name',
     reduce: my_reduce_function /*, ...*/});
 ```
 
-.</div><div class="slide">
+
 
 # Sample Document
 
@@ -30,7 +29,7 @@ db.runCommand({ mapreduce: 'collection_name',
 }
 ```
 
-.</div><div class="slide">
+
 
 # map function
 
@@ -48,7 +47,7 @@ var map = function () {
 };
 ```
 
-.</div><div class="slide">
+
 
 # reduce function
 
@@ -67,7 +66,7 @@ var reduce = function (key, values) {
 };
 ```
 
-.</div><div class="slide">
+
 
 # Map-Reduce Example
 
@@ -87,4 +86,3 @@ var map = function () {
 db.books.mapReduce(map, reduce, {out: {inline: 1}});
 ```
 
-.</div>

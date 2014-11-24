@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Socket.IO
 
@@ -9,7 +8,7 @@
  * Forever Iframe
  * JSONP Polling
 
-.</div><div class="slide">
+
 
 # WebSocket Request
 
@@ -24,7 +23,7 @@ Upgrade: websocket
 Sec-WebSocket-Version: 13
 ```
 
-.</div><div class="slide">
+
 
 # WebSocket Response
 
@@ -35,7 +34,7 @@ Upgrade: websocket
 Sec-WebSocket-Accept: RDaVahzV8dztrUzeJ9WXC5NesG8=
 ```
 
-.</div><div class="slide">
+
 
 # IO - Server
 
@@ -52,7 +51,7 @@ io.sockets.on('connection', function (socket) {
 
 <span class="fs66" style="color: #aaa">simplified - see code-snippets/nodejs/socket-io-server.js</span>
 
-.</div><div class="slide">
+
 
 # IO - Client
 
@@ -80,4 +79,3 @@ http://www.catonmat.net/blog/nodejs-modules-socketio/
 
 .  </div>
 
-.</div>

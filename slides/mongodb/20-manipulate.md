@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Update
 
@@ -15,7 +14,6 @@ db.books.update({},
     false, true);
 ```
 
-.</div><div class="slide">
 
 # Delete
 
@@ -35,4 +33,3 @@ db.books.remove({/* ... */}, {$atomic:true});
 
 .   </div>
 
-.</div>

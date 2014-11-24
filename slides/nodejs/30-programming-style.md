@@ -1,6 +1,7 @@
-.<div class="slide">
 
 # Asynchronous Programming Style
+
+.<div class="fs75">
 
 ### Callbacks
 
@@ -16,7 +17,7 @@
  * call once or many times
  * error situations have special event 'error'
 
-.</div><div class="slide">
+.</div>
 
 # Event Emitter Example
 
@@ -37,7 +38,7 @@ util.inherits(LineInfoEmitter, EventEmitter);
 
 <div class="fs66" style="color: #888">Full source see [github.com/hgoebl/entintar](https://github.com/hgoebl/entintar/blob/master/lib/LineInfoEmitter.js)</div>
 
-.</div><div class="slide">
+
 
 # Event Consumer
 
@@ -59,7 +60,7 @@ lineInfoEmitter.on('end', function () {
 
 <div class="fs66" style="color: #888">Full source see [github.com/hgoebl/entintar](https://github.com/hgoebl/entintar/blob/master/lib/logfile-appender.js)</div>
 
-.</div><div class="slide">
+
 
 # Callback Example
 
@@ -75,7 +76,7 @@ function getSomeData(input, callback) {
   });
 } ```
 
-.</div><div class="slide">
+
 
 # Fight the X-mas Tree
 
@@ -96,7 +97,7 @@ client.useDatabase('mydb', function (err) {
 });
 ```
 
-.</div><div class="slide">
+
 
 # async
 
@@ -112,4 +113,3 @@ async.series([
    <span class="fs50">e.g. forEachLimit, mapSeries, filter, filterSeries, waterfall</span>
  * see [github.com/caolan/async](https://github.com/caolan/async), `npm install async`
 
-.</div>

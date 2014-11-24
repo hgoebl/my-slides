@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Import / Export
 
@@ -13,4 +12,3 @@ mongoexport -d test -c books --jsonArray > books.json
 mongoimport -d test -c books --jsonArray < books.json
 ```
 
-.</div>

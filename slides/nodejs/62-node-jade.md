@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # jade - node template engine
 
@@ -37,5 +36,4 @@ html(lang="en")
 
 .</td></tr></table>
 
-.</div>
 

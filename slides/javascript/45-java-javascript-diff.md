@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Diff JavaScript - Java
 
@@ -19,4 +18,3 @@ See code-snippets/java
 
 .</div>
 
-.</div>

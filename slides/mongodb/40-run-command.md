@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # runCommand
 
@@ -12,4 +11,3 @@ db.runCommand({ serverStatus: 1 });
 db.runCommand({ shutdown: 1 });
 ```
 
-.</div>

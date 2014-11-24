@@ -1,5 +1,4 @@
 
-.<div class="slide">
 
 # MongoDB
 
@@ -9,7 +8,6 @@
 
 #### www.goebl.com
 
-.</div><div class="slide" style="">
 
 # About me
 
@@ -26,4 +24,3 @@
 
 .</td></tr></table>
 
-.</div>

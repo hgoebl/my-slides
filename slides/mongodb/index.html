@@ -9,7 +9,7 @@
     <meta name="company" content="www.goebl.com"/>
     <!-- extensions -->
     <meta name="transitions" content="no"/>
-    <link rel="stylesheet" href="http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
+    <link rel="stylesheet" href="http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
     <style>
         img.scaled-centered {
             max-width:100%;
@@ -44,7 +44,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background-image: url('http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/default/preloaders.gif');
+            background-image: url('http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/default/preloaders.gif');
             background-repeat:no-repeat;
             background-position: center center;
         }
@@ -52,6 +52,8 @@
             display: none;
         }
     </style>
+    <script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+    
 </head>
 <body>
 <div id="loading"></div>
@@ -69,14 +71,10 @@
 </div>
 <div class="presentation">
 
-    <div class="slide">
-
-<h1>MongoDB</h1>
+    <h1>MongoDB</h1>
 <h2>A Short Introduction</h2>
 <h3>Heinrich Göbl</h3>
 <h4>www.goebl.com</h4>
-</div><div class="slide" style="">
-
 <h1>About me</h1>
 <table><tr><td>
 
@@ -93,9 +91,6 @@
 </p>
 </td></tr></table>
 
-</div>
-
-<div class="slide">
 
 <h1>What is MongoDB?</h1>
 <ul>
@@ -118,7 +113,6 @@
 </p>
    </div>
 
-</div><div class="slide">
 
 <h1>Some facts</h1>
 <ul>
@@ -132,14 +126,12 @@
 </ul>
 </li>
 </ul>
-</div><div class="slide">
-
 <h1>Database Landscape</h1>
 <p><img src="media/mongo-db-landscape.png" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Terminology</h1>
 <table class="info">
 <thead>
@@ -156,9 +148,6 @@
 </tbody>
 </table>
 
-</div>
-
-<div class="slide">
 
 <h1>Philosophy</h1>
 <ul>
@@ -168,15 +157,10 @@
 <li>Store and marshal BSON (binary JSON)</li>
 <li>A lot of work is delegated to Clients (drivers)</li>
 </ul>
-</div><div class="slide">
-
 <h1>Data to Big Data</h1>
 <p><img src="media/mongo-data-to-big-data.png" class="scaled-centered">
 
 </p>
-</div>
-
-<div class="slide">
 
 <h1>Document Data Model</h1>
 <pre><code class="lang-javascript">var book = {
@@ -189,8 +173,6 @@
   pages: 195,
   published: 2010
 };</code></pre>
-</div><div class="slide">
-
 <h1>Insert</h1>
 <pre><code class="lang-javascript">db.books.save(book);
 
@@ -199,8 +181,6 @@
 // e.g. 4fba97070f318c1e73763350
 
 book._id;</code></pre>
-</div><div class="slide">
-
 <h1>Simple Queries 1</h1>
 <pre><code class="lang-javascript">db.books.find(); // find all
 
@@ -212,8 +192,6 @@ db.books.find().count();
 db.books.findOne({
     _id: ObjectId(&quot;4fba97190f318c1e73763353&quot;)
 });</code></pre>
-</div><div class="slide">
-
 <h1>Simple Queries 2</h1>
 <pre><code class="lang-javascript">db.books.find({ title: &#39;JavaScript Patterns&#39; });
 
@@ -221,8 +199,6 @@ db.books.find({ title: /^MongoDB/ });
 
 db.books.find({ title: /^MongoDB/,   // and
                 pages: {$gt: 200} });</code></pre>
-</div><div class="slide">
-
 <h1>Query Deep Structures</h1>
 <pre><code class="lang-javascript">db.books.find({
   &#39;authors.lastName&#39;: &#39;Katz&#39;});
@@ -234,8 +210,6 @@ db.books.find({
     {&#39;authors.lastName&#39;: &#39;Katz&#39;},
     {&#39;authors.lastName&#39;: &#39;McCaw&#39;}
   ]});</code></pre>
-</div><div class="slide">
-
 <h1>Query Multivalued Fields</h1>
 <pre><code class="lang-javascript">db.books.find({authors: {$size:2} });
 
@@ -246,9 +220,6 @@ db.books.find({
   tags: {$all: [&#39;Programming&#39;,
                 &#39;JavaScript&#39;]}
   });</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Projection, Sort, Limit</h1>
 <pre><code class="lang-javascript">db.books.
@@ -256,9 +227,6 @@ db.books.find({
     {title: 1, pages: 1}).
     sort({title: 1}).
     limit(4);</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Update</h1>
 <pre><code class="lang-javascript">db.books.update({title: /Good Parts/},
@@ -271,8 +239,6 @@ db.books.update({title: /in Action/},
 db.books.update({},
     {$addToSet: {tags: &#39;Programming&#39;}},
     false, true);</code></pre>
-</div><div class="slide">
-
 <h1>Delete</h1>
 <pre><code class="lang-javascript">db.books.remove({_id: mybook._id});
 
@@ -285,9 +251,6 @@ db.books.remove(); // truncate col</code></pre>
 // blocking!</code></pre>
    </div>
 
-</div>
-
-<div class="slide">
 
 <h1>count, distinct, group</h1>
 <pre><code class="lang-javascript">db.runCommand({count: &#39;books&#39;,
@@ -303,9 +266,6 @@ db.runCommand({group: {
     },
     initial: { pages: 0 }
 }});</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>runCommand</h1>
 <pre><code class="lang-javascript">db.runCommand({ dropDatabase: 1 });
@@ -315,9 +275,6 @@ db.runCommand({ getLastError: 1 });
 db.runCommand({ serverStatus: 1 });
 
 db.runCommand({ shutdown: 1 });</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Map-Reduce</h1>
 <ul>
@@ -332,8 +289,6 @@ db.runCommand({ shutdown: 1 });</code></pre>
 <pre><code class="lang-javascript">db.runCommand({ mapreduce: &#39;collection_name&#39;,
     map: my_map_function,
     reduce: my_reduce_function /*, ...*/});</code></pre>
-</div><div class="slide">
-
 <h1>Sample Document</h1>
 <pre><code class="lang-javascript">{ &quot;title&quot;: &quot;MongoDB in Action&quot;,
   &quot;authors&quot;: [
@@ -343,8 +298,6 @@ db.runCommand({ shutdown: 1 });</code></pre>
   &quot;tags&quot;: [ &quot;NoSQL&quot;, &quot;Database&quot;, &quot;Programming&quot; ],
   &quot;pages&quot;: 311
 }</code></pre>
-</div><div class="slide">
-
 <h1>map function</h1>
 <ul>
 <li>analyze one document (bound to <code>this</code>)</li>
@@ -359,8 +312,6 @@ db.runCommand({ shutdown: 1 });</code></pre>
     emit(tag, { pages: doc.pages });
   });
 };</code></pre>
-</div><div class="slide">
-
 <h1>reduce function</h1>
 <ul>
 <li>aggregate many emits to one</li>
@@ -376,8 +327,6 @@ db.runCommand({ shutdown: 1 });</code></pre>
     });
     return result;
 };</code></pre>
-</div><div class="slide">
-
 <h1>Map-Reduce Example</h1>
 <pre><code class="lang-javascript">var map = function () {
         var doc = this;
@@ -392,9 +341,6 @@ db.runCommand({ shutdown: 1 });</code></pre>
         return result;
     };
 db.books.mapReduce(map, reduce, {out: {inline: 1}});</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Indexes</h1>
 <pre><code class="lang-javascript">db.books.ensureIndex({&quot;title&quot;: 1}, {unique: true});
@@ -406,9 +352,6 @@ db.books.ensureIndex({&quot;tags&quot;: 1});
 db.books.getIndexes();
 
 db.books.dropIndex(&#39;title_1&#39;);</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Import / Export</h1>
 <pre><code>mongoexport -d test -c books &gt; mongo.books.txt
@@ -419,34 +362,31 @@ mongoimport -d test -c books --file books.txt
 
 mongoexport -d test -c books --jsonArray &gt; books.json
 mongoimport -d test -c books --jsonArray &lt; books.json</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Replica Sets</h1>
 <p><img src="media/mongo-replicaset-1.png" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Replica Sets</h1>
 <p><img src="media/mongo-replicaset-2.png" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Replica Sets</h1>
 <p><img src="media/mongo-replicaset-3.png" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Replica Sets</h1>
 <p><img src="media/mongo-replicaset-4.png" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Sharding</h1>
 <p><img src="media/mongo-sharding-1.png" class="scaled-centered">
 
@@ -459,11 +399,10 @@ mongoimport -d test -c books --jsonArray &lt; books.json</code></pre>
 </p>
    </div>
 
-</div>
-
-<div class="slide">
 
 <h1>Reading</h1>
+<div class="fs75">
+
 <h2>Internet</h2>
 <ul>
 <li><a href="http://www.mongodb.org/">http://www.mongodb.org/</a></li>
@@ -479,9 +418,6 @@ Kristina Chodorow &amp; Michael Dirolf, O&#39;Reilly, 2010</li>
 Kyle Banker, Manning Publications, 2012</li>
 </ul>
 </div>
-
-<div class="slide">
-
 <h1>Credits</h1>
 <ul>
 <li>Thanks to 10gen (the company behind MongoDB)<ul>
@@ -490,16 +426,12 @@ Kyle Banker, Manning Publications, 2012</li>
 </ul>
 </li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Questions?</h1>
 <p><img src="media/questions.jpg" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>Thank you!</h1>
 <pre><code class="lang-javascript">// my mail address
 &#39;hgoebl+goebl.com&#39;.replace(&#39;+&#39;, &#39;@&#39;)</code></pre>
@@ -521,21 +453,19 @@ Kyle Banker, Manning Publications, 2012</li>
 </p>
 </td></tr></table>
 
-</div>
 
 
 </div>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/hammer/hammer-1.0.6.min.js" type="text/javascript"></script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/common/s5.js" type="text/javascript"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/hammer/hammer.min.js" type="text/javascript"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/common/s5.js" type="text/javascript"></script>
 <script>
     window.hijs = '.lang-javascript';
 </script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/hijs/hijs.js"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/hijs/hijs.js"></script>
 <script>
 
     $(function () {
-        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.io/nerdshow/rt/0.3.0/hijs/my-hijs.css"/>').appendTo('head');
+        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.io/nerdshow/rt/0.4.0/hijs/my-hijs.css"/>').appendTo('head');
     });
 
 </script>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # JavaScript in Facelets (1)
 
@@ -14,7 +13,6 @@
 
  * encode ``<`` ``>`` ``&`` with ``&lt;`` ``&gt;`` ``&amp;``
 
-.</div><div class="slide">
 
 # JavaScript in Facelets (2)
 
@@ -31,4 +29,3 @@
 </script>
 ```
 
-.</div>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # seq
 
@@ -19,4 +18,3 @@ Seq()
 
 **Demo/Examples?**
 
-.</div>

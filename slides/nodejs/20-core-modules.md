@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Global Objects
 
@@ -12,7 +11,7 @@
  * module, module.exports, exports
  * console, setTimeout, setInterval, ...
 
-.</div><div class="slide">
+
 
 # Core Modules
 
@@ -24,4 +23,3 @@
    * path - similar to `java.io.File` Class
    * crypto, dns, url, util, os, zlib, ...
 
-.</div>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Late Binding of 'this'
 
@@ -17,4 +16,3 @@
  getName();          // undefined
  ```
 
-.</div>

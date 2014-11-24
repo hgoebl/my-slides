@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # switch - not like Java!
 
@@ -16,7 +15,6 @@ for (i = 1; i <= 3; ++i) {
 }
 ```
 
-.</div><div class="slide">
 
 # Exception Handling (1)
 
@@ -34,7 +32,6 @@ finally {
 }
 ```
 
-.</div><div class="slide">
 
 # Exception Handling (2)
 
@@ -47,7 +44,6 @@ throw {
 throw Error('Bei mia is ois kabutt');
 ```
 
-.</div><div class="slide">
 
 # console: measuring time
 
@@ -61,7 +57,6 @@ console.timeEnd('myHeavyLoop');
 // myHeavyLoop: 12ms
 ```
 
-.</div><div class="slide" data-expert-level="5">
 
 # Pitfall - function in loop
 
@@ -79,7 +74,6 @@ nums[0](2); // Prints 12 instead of 2
 // example from www.jshint.com/options/
 ```
 
-.</div><div class="slide" data-expert-level="5">
 
 # Pitfall - function in loop
 
@@ -97,14 +91,12 @@ for (i = 0; i < 10; i++) {
 // example from www.jshint.com/options/
 ```
 
-.</div><div class="slide">
 
 # Documentation
 
  * <http://jashkenas.github.com/docco/> (literate-programming-style documentation generator)
  * <http://code.google.com/p/jsdoc-toolkit/> jsdoc-toolkit - A documentation generator for JavaScript
 
-.</div><div class="slide">
 
 # Content Delivery Networks
 
@@ -115,7 +107,6 @@ for (i = 0; i < 10; i++) {
  * <http://www.cdnjs.com/>
  * Don't use source repositories (svn/...)
 
-.</div><div class="slide">
 
 # Boolean Expressions (2)
 
@@ -137,7 +128,6 @@ public void f(MyObj o) {
 }
 ```
 
-.</div><div class="slide">
 
 # Conclusions (1)
 
@@ -149,7 +139,6 @@ public void f(MyObj o) {
 
  * check ``hasOwnProperty`` when doing ``for(e in obj)``
 
-.</div><div class="slide">
 
 # Conclusions (2)
 
@@ -159,4 +148,3 @@ public void f(MyObj o) {
  * use a lint program (or an IDE plugin)
  * don't use `new Array` and `new Object`
 
-.</div>

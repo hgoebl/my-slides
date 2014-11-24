@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Example: net
 
@@ -14,4 +13,3 @@ net.createServer(function (stream) {
 }).listen(7000);
 ```
 
-.</div>

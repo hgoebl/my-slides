@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Pitfall - Numbers
 
@@ -14,7 +13,6 @@ Number.MAX_VALUE       // 1.7976931348623157e+308
  * All Numbers are 64-Bit floating point values
  * Don't expect Exceptions
 
-.</div><div class="slide">
 
 # Pitfall - Number Parsing
 
@@ -41,7 +39,6 @@ Number(36 * 36 - 1).toString(36);     // 'zz'
 
 .  </div>
 
-.</div><div class="slide">
 
 # Pitfall - ASI
 
@@ -60,7 +57,6 @@ return; // = return undefined;
 }; // code not reachable -> garbage collected
 ```
 
-.</div><div class="slide">
 
 # Pitfall - forget new
 
@@ -75,7 +71,6 @@ jQuery.Event = function( src, props ) {
 };
 ```
 
-.</div><div class="slide">
 
 # Other Pitfalls
 
@@ -86,4 +81,3 @@ jQuery.Event = function( src, props ) {
  * `new Function` - rarly necessary
  * "enhancing" Prototypes of String, Object, Function, ...
 
-.</div>

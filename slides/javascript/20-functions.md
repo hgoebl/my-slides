@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Function Declaration (1)
 
@@ -15,7 +14,6 @@ add.length;              // 2
 typeof add;              // 'function'
 ```
 
-.</div><div class="slide">
 
 # Function Declaration (2)
 
@@ -32,7 +30,6 @@ add(3, 7, 4, 6);         // 20
 add.length;              // 0
 ```
 
-.</div><div class="slide">
 
 # Function Expression (1)
 
@@ -49,7 +46,6 @@ typeof max;     // 'function'
 function min(a, b) { return a < b ? a : b; }
 ```
 
-.</div><div class="slide">
 
 # Functions: 1st-Class Objects
 
@@ -67,7 +63,6 @@ jQuery.trim('  hi  ');
 jQuery('#btnOk').click(function () { /* ... */ });
 ```
 
-.</div><div class="slide">
 
 # Scopes
 
@@ -79,7 +74,6 @@ jQuery('#btnOk').click(function () { /* ... */ });
 <div style="color: #F20C68; font-size: 120%; line-height: 120%; padding: 1em; background-color: #FAF89B">&ldquo;In JavaScript there's no curly braces local scope; in other words, **blocks don't create scope**.&rdquo;</div>
 <div class="fs66" style="color: #888; margin-top: 0.5em">**JavaScript Patterns**, Stoyan Stefanov, O'Reilly, 2010</div>
 
-.</div><div class="slide">
 
 # Module Pattern
 
@@ -99,7 +93,6 @@ MYKA.module1.Customer = function (){
 };
 ```
 
-.</div><div class="slide">
 
 # IIFE
 
@@ -123,4 +116,3 @@ MYKA.module1.Customer = function (){
 (function() { /* ... */ }());
 ```
 
-.</div>

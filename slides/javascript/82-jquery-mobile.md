@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # jQuery Mobile - head
 
@@ -14,7 +13,6 @@
 </head>
 ```
 
-.</div><div class="slide">
 
 # jQuery Mobile - body
 
@@ -34,7 +32,6 @@
 </section>
 ```
 
-.</div><div class="slide">
 
 # jQuery Mobile - code
 
@@ -55,4 +52,3 @@ $(function () {
 });
 ```
 
-.</div>

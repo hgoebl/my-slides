@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Modules
 
@@ -17,7 +16,7 @@ var add = require('./add.js').add;
 console.log('4 + 5 =', add(4, 5));
 ```
 
-.</div><div class="slide">
+
 
 # Local/Module Scope
 
@@ -37,7 +36,7 @@ console.log('4 + 5 =', add(4, 5));
 <br/>
 <div class="fs66" style="color: #888">Or use a Module Loader ([AMD](https://github.com/amdjs/amdjs-api/wiki/AMD), ...)</div>
 
-.</div><div class="slide">
+
 
 # Local/Module Scope
 
@@ -56,7 +55,7 @@ function mytool() {
 exports.tool = mytool;
 ```
 
-.</div><div class="slide">
+
 
 # Synchronous vs. Asynchronous
 
@@ -77,7 +76,7 @@ db.query("select * from tab", function (result) {
 // proceeding w/o waiting
 ```
 
-.</div><div class="slide">
+
 
 # Async Style Advantages
 
@@ -87,4 +86,3 @@ db.query("select * from tab", function (result) {
  * Scales well for particular applications
  * JavaScript is a good choice (functions are first-class objects)
 
-.</div>

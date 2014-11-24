@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Node.js
 
@@ -8,7 +7,6 @@
 
 #### www.goebl.com
 
-.</div><div class="slide" style="">
 
 # About me
 
@@ -25,7 +23,7 @@
 
 .</td></tr></table>
 
-.</div><div class="slide">
+
 
 # What is Node?
 
@@ -38,7 +36,7 @@
   * fast, scalable
   * network applications.
 
-.</div><div class="slide">
+
 
 # What is Node?
 
@@ -52,7 +50,7 @@
  * soft-real-time applications
  * that run across distributed devices.
 
-.</div><div class="slide">
+
 
 # And ...
 
@@ -63,7 +61,7 @@
  * Same Programming Language for Client and Server
  * Linux, MacOS, Windows
 
-.</div><div class="slide">
+
 
 # Typical Uses
 
@@ -95,7 +93,7 @@ See also: <http://nodeguide.com/convincing_the_boss.html>
 
 .   </div>
 
-.</div><div class="slide">
+
 
 # REPL (Read-Eval-Print-Loop)
 
@@ -110,7 +108,7 @@ See also: <http://nodeguide.com/convincing_the_boss.html>
 
 **Demo!?**
 
-.</div><div class="slide">
+
 
 # Hello World
 
@@ -129,4 +127,3 @@ server = http.createServer(handler);
 server.listen(7001); // Port is 7001
 ```
 
-.</div>

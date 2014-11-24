@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # npm
 
@@ -10,7 +9,7 @@
   * publish own packages
   * "Little-Maven" for node
 
-.</div><div class="slide">
+
 
 # package.json
 
@@ -28,7 +27,7 @@
 
 <span class="fs50" style="color: #aaa">Example shortened</span>
 
-.</div><div class="slide">
+
 
 # Use npm
 
@@ -59,10 +58,9 @@ npm start
 
 .  </div>
 
-.</div><div class="slide">
+
 
 # npm registry
 
 <img src="media/search-npmjs-org.png" class="scaled-centered">
 
-.</div>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Credits
 
@@ -6,4 +5,3 @@
     * Jared Rosoff - most graphics come from his presentation (MongoDB Tech Intro, 2010)
     * Renaud Viel - Account Manager
 
-.</div>

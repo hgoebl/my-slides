@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # jQuery Examples
 
@@ -22,4 +21,3 @@ $('div.funtimes').animate(
 );
 ```
 
-.</div>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Fighting Pitfalls
 
@@ -13,4 +12,3 @@
  * consider using [CoffeeScript](http://coffeescript.org/) (compiles to JavaScript)
    <br/><span class="fs66" style="color: #888">&ldquo;I don't like it - it is completely different and has no C-like {}...&rdquo;</span>
 
-.</div>

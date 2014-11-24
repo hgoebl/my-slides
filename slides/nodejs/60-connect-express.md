@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Connect
 
@@ -21,9 +20,11 @@ var app = connect()
 ```
 
 
-.</div><div class="slide">
+
 
 # Connect Middleware
+
+.<div class="fs75">
 
  * **logger** request logger with custom format support
  * **compress** Gzip compression middleware
@@ -35,9 +36,11 @@ var app = connect()
  * **query** automatic querystring parser, populating req.query
  * ...
 
-.</div><div class="slide">
+.</div>
 
 # express
+
+.<div class="fs75">
 
  * &rdquo;High performance, high class web development for Node.js&ldquo;
  * [express](http://expressjs.com/) extends connect
@@ -50,7 +53,7 @@ var app = connect()
    * Redirection helpers
    * Content negotiation
 
-.</div><div class="slide">
+.</div>
 
 # express Example
 
@@ -60,7 +63,7 @@ var app = connect()
  * test with [mocha](http://visionmedia.github.com/mocha/)
  * see code-snippets/json-api-mongo/
 
-.</div><div class="slide">
+
 
 # GET /books
 
@@ -80,4 +83,3 @@ app.get('/books/:bookId([a-f0-9]{24})',
   });
 ```
 
-.</div>

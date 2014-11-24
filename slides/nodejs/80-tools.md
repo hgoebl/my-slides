@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Testing
 
@@ -11,7 +10,7 @@
  * [Vows](http://vowsjs.org/) Asynchronous behaviour driven development for Node
  * [nodeunit](https://github.com/caolan/nodeunit) - the classic node testing framework
 
-.</div><div class="slide">
+
 
 # Debugging
 
@@ -27,4 +26,3 @@
 
 **Demo?**
 
-.</div>

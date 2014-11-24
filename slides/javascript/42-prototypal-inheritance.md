@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Inheritance Summary
 
@@ -14,4 +13,3 @@
  * ECMAScript 5 comes w/ `Object.create` method
  * Search the Web ...
 
-.</div>

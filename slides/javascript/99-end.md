@@ -1,10 +1,8 @@
-.<div class="slide">
 
 # Questions?
 
 <img src="media/questions.jpg" class="scaled-centered">
 
-.</div><div class="slide">
 
 # Thank you!
 
@@ -29,4 +27,3 @@
 
 .</td></tr></table>
 
-.</div>

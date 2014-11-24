@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Debugging Proxies
 
@@ -6,13 +5,11 @@
    <span class="fs50">HTTP proxy, monitor, Reverse Proxy; enables a developer to view HTTP/HTTPS traffic</span>
  * [Fiddler](http://www.fiddler2.com/fiddler2/version.asp) Web Debugging Proxy
 
-.</div><div class="slide">
 
 # jsFiddle (Example)
 
 <div style="background: url('media/jsfiddle-example.png') no-repeat center center; height: 100%"></div>
 
-.</div><div class="slide">
 
 # jsFiddle
 
@@ -28,7 +25,6 @@
 
 .  </div>
 
-.</div><div class="slide">
 
 # console
 
@@ -53,7 +49,6 @@ Links
 
 .  </div>
 
-.</div><div class="slide">
 
 # console: old browsers
 
@@ -71,5 +66,4 @@ if (typeof console === 'undefined') {
 }
 ```
 
-.</div>
 

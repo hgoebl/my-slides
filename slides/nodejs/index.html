@@ -9,7 +9,7 @@
     <meta name="company" content="www.goebl.com"/>
     <!-- extensions -->
     <meta name="transitions" content="no"/>
-    <link rel="stylesheet" href="http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
+    <link rel="stylesheet" href="http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
     <style>
         img.scaled-centered {
             max-width:100%;
@@ -44,7 +44,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background-image: url('http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/default/preloaders.gif');
+            background-image: url('http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/default/preloaders.gif');
             background-repeat:no-repeat;
             background-position: center center;
         }
@@ -52,6 +52,8 @@
             display: none;
         }
     </style>
+    <script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+    
 </head>
 <body>
 <div id="loading"></div>
@@ -69,14 +71,10 @@
 </div>
 <div class="presentation">
 
-    <div class="slide">
-
-<h1>Node.js</h1>
+    <h1>Node.js</h1>
 <h2>An Overview</h2>
 <h3>Heinrich Göbl</h3>
 <h4>www.goebl.com</h4>
-</div><div class="slide" style="">
-
 <h1>About me</h1>
 <table><tr><td>
 
@@ -93,7 +91,7 @@
 </p>
 </td></tr></table>
 
-</div><div class="slide">
+
 
 <h1>What is Node?</h1>
 <ul>
@@ -108,8 +106,6 @@
 <li>fast, scalable</li>
 <li>network applications.</li>
 </ul>
-</div><div class="slide">
-
 <h1>What is Node?</h1>
 <ul>
 <li>Uses an event-driven,</li>
@@ -124,8 +120,6 @@
 <li>soft-real-time applications</li>
 <li>that run across distributed devices.</li>
 </ul>
-</div><div class="slide">
-
 <h1>And ...</h1>
 <ul>
 <li>Server-Side JavaScript</li>
@@ -135,8 +129,6 @@
 <li>Same Programming Language for Client and Server</li>
 <li>Linux, MacOS, Windows</li>
 </ul>
-</div><div class="slide">
-
 <h1>Typical Uses</h1>
 <ul>
 <li>(Soft) Real-Time Web Applications</li>
@@ -170,7 +162,7 @@
 </ul>
    </div>
 
-</div><div class="slide">
+
 
 <h1>REPL (Read-Eval-Print-Loop)</h1>
 <ul>
@@ -186,9 +178,9 @@
 </p>
 <p><strong>Demo!?</strong>
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Hello World</h1>
 <pre><code class="lang-javascript">console.log(&#39;Hello stdout-World&#39;);</code></pre>
 <pre><code class="lang-javascript">var http = require(&#39;http&#39;), handler, server;
@@ -199,9 +191,6 @@ handler = function (req, res) {
 };
 server = http.createServer(handler);
 server.listen(7001); // Port is 7001</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Modules</h1>
 <p>Definition (<strong>add.js</strong>)
@@ -215,8 +204,6 @@ exports.add = add;</code></pre>
 <pre><code class="lang-javascript">var add = require(&#39;./add.js&#39;).add;
 
 console.log(&#39;4 + 5 =&#39;, add(4, 5));</code></pre>
-</div><div class="slide">
-
 <h1>Local/Module Scope</h1>
 <h3>Classic JavaScript</h3>
 <pre><code class="lang-javascript">(function (global) {
@@ -231,7 +218,7 @@ console.log(&#39;4 + 5 =&#39;, add(4, 5));</code></pre>
 </p>
 <div class="fs66" style="color: #888">Or use a Module Loader (<a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD</a>, ...)</div>
 
-</div><div class="slide">
+
 
 <h1>Local/Module Scope</h1>
 <h3>The Node Way</h3>
@@ -245,8 +232,6 @@ function mytool() {
 }
 
 exports.tool = mytool;</code></pre>
-</div><div class="slide">
-
 <h1>Synchronous vs. Asynchronous</h1>
 <pre><code class="lang-javascript">// synchronous (waiting ...)
 var result = db.query(&quot;select * from tab&quot;);
@@ -260,8 +245,6 @@ db.query(&quot;select * from tab&quot;, function (result) {
     result.forEach(/* use result */);
 });
 // proceeding w/o waiting</code></pre>
-</div><div class="slide">
-
 <h1>Async Style Advantages</h1>
 <ul>
 <li>Small memory footprint</li>
@@ -270,9 +253,6 @@ db.query(&quot;select * from tab&quot;, function (result) {
 <li>Scales well for particular applications</li>
 <li>JavaScript is a good choice (functions are first-class objects)</li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Global Objects</h1>
 <ul>
@@ -288,8 +268,6 @@ db.query(&quot;select * from tab&quot;, function (result) {
 <li>module, module.exports, exports</li>
 <li>console, setTimeout, setInterval, ...</li>
 </ul>
-</div><div class="slide">
-
 <h1>Core Modules</h1>
 <ul>
 <li>modules compiled into the binary, e.g.<ul>
@@ -302,9 +280,6 @@ db.query(&quot;select * from tab&quot;, function (result) {
 </ul>
 </li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Example: net</h1>
 <pre><code class="lang-javascript">var net = require(&#39;net&#39;);
@@ -316,11 +291,10 @@ net.createServer(function (stream) {
     });
     stream.pipe(stream);
 }).listen(7000);</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Asynchronous Programming Style</h1>
+<div class="fs75">
+
 <h3>Callbacks</h3>
 <ul>
 <li>async methods last parameter is a function (=callback)</li>
@@ -336,7 +310,7 @@ net.createServer(function (stream) {
 <li>call once or many times</li>
 <li>error situations have special event &#39;error&#39;</li>
 </ul>
-</div><div class="slide">
+</div>
 
 <h1>Event Emitter Example</h1>
 <pre><code class="lang-javascript">function LineInfoEmitter(options, rules) {
@@ -353,7 +327,7 @@ net.createServer(function (stream) {
 util.inherits(LineInfoEmitter, EventEmitter);</code></pre>
 <div class="fs66" style="color: #888">Full source see <a href="https://github.com/hgoebl/entintar/blob/master/lib/LineInfoEmitter.js">github.com/hgoebl/entintar</a></div>
 
-</div><div class="slide">
+
 
 <h1>Event Consumer</h1>
 <pre><code class="lang-javascript">logstream = fs.createWriteStream(logfile, {flags:&#39;w&#39;});
@@ -371,7 +345,7 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
 });</code></pre>
 <div class="fs66" style="color: #888">Full source see <a href="https://github.com/hgoebl/entintar/blob/master/lib/logfile-appender.js">github.com/hgoebl/entintar</a></div>
 
-</div><div class="slide">
+
 
 <h1>Callback Example</h1>
 <pre><code class="lang-javascript">function getSomeData(input, callback) {
@@ -384,8 +358,6 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
     callback(null, result);
   });
 }</code></pre>
-</div><div class="slide">
-
 <h1>Fight the X-mas Tree</h1>
 <pre><code class="lang-javascript">client.useDatabase(&#39;mydb&#39;, function (err) {
   if (err) { ... }
@@ -401,8 +373,6 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
       });
     });
 });</code></pre>
-</div><div class="slide">
-
 <h1>async</h1>
 <pre><code class="lang-javascript">async.series([
     function(){ ... },
@@ -414,8 +384,6 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
 <span class="fs50">e.g. forEachLimit, mapSeries, filter, filterSeries, waterfall</span></li>
 <li>see <a href="https://github.com/caolan/async">github.com/caolan/async</a>, <code>npm install async</code></li>
 </ul>
-</div>
-<div class="slide">
 
 <h1>seq</h1>
 <pre><code class="lang-javascript">Seq()
@@ -435,8 +403,6 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
 <p><strong>Demo/Examples?</strong>
 
 </p>
-</div>
-<div class="slide">
 
 <h1>npm</h1>
 <ul>
@@ -448,8 +414,6 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
 <li>publish own packages</li>
 <li>&quot;Little-Maven&quot; for node</li>
 </ul>
-</div><div class="slide">
-
 <h1>package.json</h1>
 <pre><code class="lang-javascript">{ &quot;name&quot;: &quot;marked&quot;,
   &quot;description&quot;: &quot;A markdown parser built for speed&quot;,
@@ -462,9 +426,9 @@ lineInfoEmitter.on(&#39;end&#39;, function () {
 }</code></pre>
 <p><span class="fs50" style="color: #aaa">Example shortened</span>
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Use npm</h1>
 <pre><code class="lang-bash">$ npm install mysql
 $ npm install -g mocha
@@ -487,17 +451,16 @@ npm start
   -&gt; defaults to node server.js</code></pre>
   </div>
 
-</div><div class="slide">
+
 
 <h1>npm registry</h1>
 <p><img src="media/search-npmjs-org.png" class="scaled-centered">
 
 </p>
-</div>
-
-<div class="slide">
 
 <h1>Community Modules</h1>
+<div class="fs75">
+
 <ul>
 <li>Entry Points:<ul>
 <li><a href="https://github.com/joyent/node/wiki/modules">https://github.com/joyent/node/wiki/modules</a></li>
@@ -516,7 +479,7 @@ npm start
 <li>Async Flow Control</li>
 <li>... almost all you can imagine ...</li>
 </ul>
-</div><div class="slide">
+</div>
 
 <h1>Example: jsdom</h1>
 <pre><code class="lang-javascript">var jsdom = require(&quot;jsdom&quot;);
@@ -530,9 +493,6 @@ jsdom.env(&quot;http://localhost:8008/javascript/&quot;,
             console.log(index, window.$(this).text());
         });
     });</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Connect</h1>
 <div class="fs66">
@@ -551,9 +511,9 @@ shipping with over 18 bundled middleware and a rich selection of
     res.end(&#39;hello world\n&#39;);
   })
  .listen(3000);</code></pre>
-</div><div class="slide">
-
 <h1>Connect Middleware</h1>
+<div class="fs75">
+
 <ul>
 <li><strong>logger</strong> request logger with custom format support</li>
 <li><strong>compress</strong> Gzip compression middleware</li>
@@ -565,9 +525,11 @@ shipping with over 18 bundled middleware and a rich selection of
 <li><strong>query</strong> automatic querystring parser, populating req.query</li>
 <li>...</li>
 </ul>
-</div><div class="slide">
+</div>
 
 <h1>express</h1>
+<div class="fs75">
+
 <ul>
 <li>&rdquo;High performance, high class web development for Node.js&ldquo;</li>
 <li><a href="http://expressjs.com/">express</a> extends connect</li>
@@ -582,7 +544,7 @@ shipping with over 18 bundled middleware and a rich selection of
 </ul>
 </li>
 </ul>
-</div><div class="slide">
+</div>
 
 <h1>express Example</h1>
 <ul>
@@ -592,8 +554,6 @@ shipping with over 18 bundled middleware and a rich selection of
 <li>test with <a href="http://visionmedia.github.com/mocha/">mocha</a></li>
 <li>see code-snippets/json-api-mongo/</li>
 </ul>
-</div><div class="slide">
-
 <h1>GET /books</h1>
 <pre><code class="lang-javascript">app.get(&#39;/books/:bookId([a-f0-9]{24})&#39;,
   function (req, res) {
@@ -608,9 +568,6 @@ shipping with over 18 bundled middleware and a rich selection of
         }
       });
   });</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>jade - node template engine</h1>
 <table><tr><td style="vertical-align: top">
@@ -642,10 +599,7 @@ html(lang=&quot;en&quot;)
 &lt;/html&gt;</code></pre>
 </td></tr></table>
 
-</div>
 
-
-<div class="slide">
 
 <h1>Socket.IO</h1>
 <ul>
@@ -656,8 +610,6 @@ html(lang=&quot;en&quot;)
 <li>Forever Iframe</li>
 <li>JSONP Polling</li>
 </ul>
-</div><div class="slide">
-
 <h1>WebSocket Request</h1>
 <pre><code class="lang-http">GET ws://localhost:8008/socket.io/1/websocket/ ↵
    →   16691598151823705646 HTTP/1.1
@@ -667,15 +619,11 @@ Host: localhost:8008
 Sec-WebSocket-Key: 5qE8eKPepP/xWhWnr2Mjqg==
 Upgrade: websocket
 Sec-WebSocket-Version: 13</code></pre>
-</div><div class="slide">
-
 <h1>WebSocket Response</h1>
 <pre><code class="lang-http">HTTP/1.1 101 Switching Protocols
 Connection: Upgrade
 Upgrade: websocket
 Sec-WebSocket-Accept: RDaVahzV8dztrUzeJ9WXC5NesG8=</code></pre>
-</div><div class="slide">
-
 <h1>IO - Server</h1>
 <pre><code class="lang-javascript">var io = require(&#39;socket.io&#39;).listen(8118);
 
@@ -687,9 +635,9 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 });</code></pre>
 <p><span class="fs66" style="color: #aaa">simplified - see code-snippets/nodejs/socket-io-server.js</span>
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>IO - Client</h1>
 <pre><code class="lang-javascript">&lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -714,9 +662,6 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 </p>
   </div>
 
-</div>
-
-<div class="slide">
 
 <h1>Testing</h1>
 <ul>
@@ -730,8 +675,6 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 <li><a href="http://vowsjs.org/">Vows</a> Asynchronous behaviour driven development for Node</li>
 <li><a href="https://github.com/caolan/nodeunit">nodeunit</a> - the classic node testing framework</li>
 </ul>
-</div><div class="slide">
-
 <h1>Debugging</h1>
 <ul>
 <li>Use <a href="http://www.jetbrains.com/">JetBrains</a> IDEs if you can!<ul>
@@ -750,9 +693,6 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 <p><strong>Demo?</strong>
 
 </p>
-</div>
-
-<div class="slide">
 
 <h1>Node Hosting</h1>
 <ul>
@@ -761,11 +701,10 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 <li><a href="http://www.nodejitsu.com/">nodejitsu</a> Node.js clouds. PaaS</li>
 <li>There are more ...</li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Conclusion</h1>
+<div class="fs75">
+
 <p><strong>Pro</strong><br/><br/>
 
 </p>
@@ -784,10 +723,9 @@ io.sockets.on(&#39;connection&#39;, function (socket) {
 <li>Good JavaScript programmers are hard to find</li>
 </ul>
 </div>
-
-<div class="slide">
-
 <h1>Reading</h1>
+<div class="fs75">
+
 <h2>Internet</h2>
 <ul>
 <li><a href="http://nodejs.org/">http://nodejs.org/</a></li>
@@ -804,15 +742,12 @@ Manning Publications, 2012</li>
 <li>A lot of books are beeing written right now ...</li>
 </ul>
 </div>
-
-<div class="slide">
-
 <h1>Questions?</h1>
 <p><img src="media/questions.jpg" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+
+</p>
 <h1>Thank you!</h1>
 <pre><code class="lang-javascript">// my mail address
 &#39;hgoebl+goebl.com&#39;.replace(&#39;+&#39;, &#39;@&#39;)</code></pre>
@@ -834,10 +769,9 @@ Manning Publications, 2012</li>
 </p>
 </td></tr></table>
 
-</div>
 
 
-<div class="slide">
+
 <h1>Backup</h1>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -1064,22 +998,20 @@ Manning Publications, 2012</li>
   </g>
 </svg>
 <div class="fs50">taken from: <a href="http://rationalwiki.org/wiki/File:Stop_sign.svg">http://rationalwiki.org/ (Creative Commons Licensed)</a></div>
-</div>
 
 
 
 </div>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/hammer/hammer-1.0.6.min.js" type="text/javascript"></script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/common/s5.js" type="text/javascript"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/hammer/hammer.min.js" type="text/javascript"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/common/s5.js" type="text/javascript"></script>
 <script>
     window.hijs = '.lang-javascript';
 </script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/hijs/hijs.js"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/hijs/hijs.js"></script>
 <script>
 
     $(function () {
-        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.io/nerdshow/rt/0.3.0/hijs/my-hijs.css"/>').appendTo('head');
+        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.io/nerdshow/rt/0.4.0/hijs/my-hijs.css"/>').appendTo('head');
     });
 
 </script>

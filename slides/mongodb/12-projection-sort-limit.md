@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Projection, Sort, Limit
 
@@ -10,4 +9,3 @@ db.books.
     limit(4);
 ```
 
-.</div>

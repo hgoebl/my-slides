@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Tools
 
@@ -7,7 +6,6 @@
  * Quality (Static Code Analyzers)
  * Efficiency (Minification, Concatenation)
 
-.</div><div class="slide">
 
 # JetBrains IDEs
 
@@ -21,7 +19,6 @@
 
 **Demo?**
 
-.</div><div class="slide">
 
 # Browser Tools
 
@@ -35,7 +32,6 @@
 
 **Demo?**
 
-.</div><div class="slide">
 
 # JSHint (Static Code Analysis)
 
@@ -52,7 +48,6 @@ var a;
 <li><p>Line 5: <code>var a;</code></p><p>'a' was used before it was defined.</p></li>
 </ul>
 
-.</div><div class="slide">
 
 # JSLint global declaration
 
@@ -68,7 +63,6 @@ var a;
 })( jQuery );
 ```
 
-.</div><div class="slide">
 
 # JSHint and Alternatives
 
@@ -82,7 +76,6 @@ var a;
  * [YUI Compressor](http://developer.yahoo.com/yui/compressor/) with special options
  * [Closure Compiler](https://developers.google.com/closure/compiler/) with special options or `gjslint`
 
-.</div><div class="slide">
 
 # JSHint in Java/Maven
 
@@ -99,7 +92,6 @@ var a;
 <span style="color: #00ffff">&lt;/plugin&gt;</span><br>
 </div>
 
-.</div><div class="slide">
 
 # JS\[HL\]int IDE Integration
 
@@ -113,4 +105,3 @@ var a;
    * [JSLint Plugin for NetBeans](http://plugins.netbeans.org/plugin/40893/jslint)
    * Has a very viable JavaScript Editor and Options
 
-.</div>

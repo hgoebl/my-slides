@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Pitfalls
 
@@ -12,7 +11,6 @@
 
 .  </div>
 
-.</div><div class="slide">
 
 # Pitfall #1 - globals
 
@@ -31,7 +29,6 @@ for (i = 0; i < 10; ++i) { /* ... */ }
  * use JSLint, JSHint, yui-compressor, NetBeans, IntelliJ, ...
  * Don't use `for(var i=0; ...` - this is misleading
 
-.</div><div class="slide">
 
 # Pitfall #2 - hoisting
 
@@ -50,7 +47,6 @@ console.log(b); // undefined
 console.log(c); // ReferenceError: c is not defined
 ```
 
-.</div><div class="slide">
 
 # Pitfall #3 - type coercion
 
@@ -71,7 +67,6 @@ console.log(c); // ReferenceError: c is not defined
 ```
 
 
-.</div><div class="slide">
 
 # Pitfall #4 - this
 
@@ -89,7 +84,6 @@ obj.printLater(); // logs undefined
 
 **this** does not point to `obj`!
 
-.</div><div class="slide">
 
 # Pitfall #4 - this -> self
 
@@ -107,4 +101,3 @@ var obj = {
 obj.printLater(); // logs Jason Bourne
 ```
 
-.</div>

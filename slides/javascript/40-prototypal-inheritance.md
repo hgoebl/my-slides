@@ -1,10 +1,8 @@
-.<div class="slide">
 
 # Inheritance
 
 <img src="media/javascript-inheritance-talking-animals.png" class="scaled-centered">
 
-.</div><div class="slide">
 
 # Inheritance Patterns/Types
 
@@ -32,7 +30,6 @@ Many ways - too many ways to fall...
 
 <span style="color: #aaa" class="fs66">see "Professional JavaScript for Web Developers", Wrox Press</span>
 
-.</div><div class="slide">
 
 # Constructor Function
 
@@ -48,7 +45,6 @@ console.log(myHome);
 // { lat: 47.8239, lng: 12.0946 }
 ```
 
-.</div><div class="slide">
 
 # Member Functions
 
@@ -66,7 +62,6 @@ LatLng.prototype.getLng = function () {
 };
 ```
 
-.</div><div class="slide">
 
 # Subtype
 
@@ -85,7 +80,6 @@ POI.prototype = new LatLng(); // not the best way!
 POI.prototype.constructor = POI;
 ```
 
-.</div><div class="slide">
 
 # Add / Override Methods
 
@@ -103,4 +97,3 @@ POI.prototype.getName = function () {
 var saltys = new POI(47.587, -122.378, 'Saltys');
 ```
 
-.</div>

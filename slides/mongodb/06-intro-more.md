@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Philosophy
 
@@ -8,10 +7,8 @@
  * Store and marshal BSON (binary JSON)
  * A lot of work is delegated to Clients (drivers)
 
-.</div><div class="slide">
 
 # Data to Big Data
 
 <img src="media/mongo-data-to-big-data.png" class="scaled-centered">
 
-.</div>

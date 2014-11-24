@@ -1,6 +1,7 @@
-.<div class="slide">
 
 # Reading
+
+.<div class="fs75">
 
 ## Internet
 

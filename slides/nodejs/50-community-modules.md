@@ -1,6 +1,7 @@
-.<div class="slide">
 
 # Community Modules
+
+.<div class="fs75">
 
  * Entry Points:
    * <https://github.com/joyent/node/wiki/modules>
@@ -15,7 +16,7 @@
  * Async Flow Control
  * ... almost all you can imagine ...
 
-.</div><div class="slide">
+.</div>
 
 # Example: jsdom
 
@@ -33,4 +34,3 @@ jsdom.env("http://localhost:8008/javascript/",
     });
 ```
 
-.</div>

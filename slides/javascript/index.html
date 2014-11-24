@@ -9,7 +9,7 @@
     <meta name="company" content="www.goebl.com"/>
     <!-- extensions -->
     <meta name="transitions" content="no"/>
-    <link rel="stylesheet" href="http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
+    <link rel="stylesheet" href="http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/advanced/theme.css" type="text/css" title="advanced" media="screen"/>
     <style>
         img.scaled-centered {
             max-width:100%;
@@ -44,7 +44,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background-image: url('http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/default/preloaders.gif');
+            background-image: url('http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/default/preloaders.gif');
             background-repeat:no-repeat;
             background-position: center center;
         }
@@ -52,6 +52,8 @@
             display: none;
         }
     </style>
+    <script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+    
 </head>
 <body>
 <div id="loading"></div>
@@ -69,14 +71,10 @@
 </div>
 <div class="presentation">
 
-    <div class="slide">
-
-<h1>JavaScript</h1>
+    <h1>JavaScript</h1>
 <h2>Not only for Java Programmers</h2>
 <h3>Heinrich Göbl</h3>
 <h4>www.goebl.com</h4>
-</div><div class="slide" style="">
-
 <h1>About me</h1>
 <table><tr><td>
 
@@ -93,9 +91,6 @@
 </p>
 </td></tr></table>
 
-</div>
-
-<div class="slide">
 
 <h1>What is JavaScript?</h1>
 <p><strong> <a href="http://en.wikipedia.org/wiki/JavaScript">http://en.wikipedia.org/wiki/JavaScript</a> </strong>
@@ -136,7 +131,6 @@
 </ul>
    </div>
 
-</div><div class="slide">
 
 <h1>Why JavaScript?</h1>
 <ul>
@@ -163,9 +157,6 @@
 </ul>
    </div>
 
-</div>
-
-<div class="slide">
 
 <h1>Object Literals</h1>
 <pre><code class="lang-javascript">var obj = {
@@ -178,8 +169,6 @@
     },
     lines: [ 1, 2, &quot;abc&quot; ]
 };</code></pre>
-</div><div class="slide">
-
 <h1>Objects</h1>
 <p>Objects are associative arrays
 
@@ -193,8 +182,6 @@ obj.prop = null;
 delete obj.prop;
 &#39;prop&#39; in obj;    // false
 obj.prop;         // undefined</code></pre>
-</div><div class="slide">
-
 <h1>JSON</h1>
 <pre><code class="lang-javascript">[ 30, 10, &quot;Jason&quot; ]</code></pre>
 <p><br/>
@@ -225,9 +212,6 @@ obj.prop;         // undefined</code></pre>
 </ul>
    </div>
 
-</div>
-
-<div class="slide">
 
 <h1>Arrays</h1>
 <pre><code class="lang-javascript">var array = [ 30, 10, &quot;Jason&quot;, new Date() ];
@@ -252,7 +236,6 @@ typeof array;        // &#39;object&#39;</code></pre>
 </ul>
    </div>
 
-</div><div class="slide">
 
 <h1>Boolean Expressions</h1>
 <ul>
@@ -267,9 +250,6 @@ typeof array;        // &#39;object&#39;</code></pre>
 </ul>
 </li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Function Declaration (1)</h1>
 <pre><code class="lang-javascript">function add(arg1, arg2) {
@@ -282,8 +262,6 @@ add(&#39;Jason&#39;, &#39; Bourne&#39;); // &#39;Jason Bourne&#39;
 add([1, 3], [7, 5]);     // &#39;1,37,5&#39;
 add.length;              // 2
 typeof add;              // &#39;function&#39;</code></pre>
-</div><div class="slide">
-
 <h1>Function Declaration (2)</h1>
 <pre><code class="lang-javascript">function add() {
   var i, len, result = 0;
@@ -295,8 +273,6 @@ typeof add;              // &#39;function&#39;</code></pre>
 
 add(3, 7, 4, 6);         // 20
 add.length;              // 0</code></pre>
-</div><div class="slide">
-
 <h1>Function Expression (1)</h1>
 <pre><code class="lang-javascript">typeof max;     // &#39;undefined&#39;
 typeof min;     // &#39;function&#39;
@@ -308,8 +284,6 @@ var max = function (a, b) {
 typeof max;     // &#39;function&#39;
 
 function min(a, b) { return a &lt; b ? a : b; }</code></pre>
-</div><div class="slide">
-
 <h1>Functions: 1st-Class Objects</h1>
 <pre><code class="lang-javascript">function jQuery() { /* ... */ }
 jQuery.browser = { /* ... */ };
@@ -322,8 +296,6 @@ jQuery.trim(&#39;  hi  &#39;);
 
 // click-function gets a function reference
 jQuery(&#39;#btnOk&#39;).click(function () { /* ... */ });</code></pre>
-</div><div class="slide">
-
 <h1>Scopes</h1>
 <ul>
 <li>function scope</li>
@@ -335,7 +307,6 @@ jQuery(&#39;#btnOk&#39;).click(function () { /* ... */ });</code></pre>
 <div style="color: #F20C68; font-size: 120%; line-height: 120%; padding: 1em; background-color: #FAF89B">&ldquo;In JavaScript there&#39;s no curly braces local scope; in other words, <strong>blocks don&#39;t create scope</strong>.&rdquo;</div>
 <div class="fs66" style="color: #888; margin-top: 0.5em"><strong>JavaScript Patterns</strong>, Stoyan Stefanov, O&#39;Reilly, 2010</div>
 
-</div><div class="slide">
 
 <h1>Module Pattern</h1>
 <pre><code class="lang-javascript">var MYKA = {}; // MYKA = my killer app
@@ -351,8 +322,6 @@ MYKA.module1 = {
 MYKA.module1.Customer = function (){
   // a constructor function
 };</code></pre>
-</div><div class="slide">
-
 <h1>IIFE</h1>
 <ul>
 <li>Immediately Invoked Function Expression</li>
@@ -370,9 +339,6 @@ MYKA.module1.Customer = function (){
 </p>
 <pre><code class="lang-javascript">(function() { /* ... */ })();
 (function() { /* ... */ }());</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Late Binding of &#39;this&#39;</h1>
 <pre><code class="lang-javascript"> var obj1 = {
@@ -387,16 +353,12 @@ MYKA.module1.Customer = function (){
  obj1.getName();     // Bourne
  getName.call(obj2); // Wombosi
  getName();          // undefined</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Inheritance</h1>
 <p><img src="media/javascript-inheritance-talking-animals.png" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>Inheritance Patterns/Types</h1>
 <p>Many ways - too many ways to fall...
 
@@ -425,9 +387,8 @@ MYKA.module1.Customer = function (){
 
 <p><span style="color: #aaa" class="fs66">see &quot;Professional JavaScript for Web Developers&quot;, Wrox Press</span>
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>Constructor Function</h1>
 <pre><code class="lang-javascript">function LatLng(lat, lng) {
   this.lat = lat;
@@ -438,8 +399,6 @@ var myHome = new LatLng(47.8239, 12.0946);
 
 console.log(myHome);
 // { lat: 47.8239, lng: 12.0946 }</code></pre>
-</div><div class="slide">
-
 <h1>Member Functions</h1>
 <pre><code class="lang-javascript">LatLng.prototype.toString = function () {
   return &#39;LatLng: &#39; + this.lat + &#39;;&#39; + this.lng;
@@ -452,8 +411,6 @@ LatLng.prototype.getLat = function () {
 LatLng.prototype.getLng = function () {
   return this.lng;
 };</code></pre>
-</div><div class="slide">
-
 <h1>Subtype</h1>
 <h2>Combination Inheritance</h2>
 <pre><code class="lang-javascript">function POI(lat, lng, name) {
@@ -466,8 +423,6 @@ POI.prototype = new LatLng(); // not the best way!
 
 // correct constructor pointer
 POI.prototype.constructor = POI;</code></pre>
-</div><div class="slide">
-
 <h1>Add / Override Methods</h1>
 <pre><code class="lang-javascript">// overrides LatLng::toString
 POI.prototype.toString = function () {
@@ -480,12 +435,9 @@ POI.prototype.getName = function () {
 };
 
 var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
-</div>
-
-<div class="slide">
 
 
-    <h1>Prototype Chain</h1>
+<h1>Prototype Chain</h1>
 
     <!-- Created with Inkscape (http://www.inkscape.org/) -->
     <svg
@@ -941,9 +893,6 @@ var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
          id="tspan3825-13-47-7">undefined</tspan></text>
   </g>
 </svg>
-</div>
-
-<div class="slide">
 
 <h1>Inheritance Summary</h1>
 <ul>
@@ -963,9 +912,6 @@ var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
 <li>ECMAScript 5 comes w/ <code>Object.create</code> method</li>
 <li>Search the Web ...</li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Diff JavaScript - Java</h1>
 <ul>
@@ -990,9 +936,6 @@ var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
 </ul>
 </div>
 
-</div>
-
-<div class="slide">
 
 <h1>Pitfalls</h1>
 <p><img src="media/danger-sign_w725_h544.jpg" class="scaled-centered">
@@ -1007,7 +950,6 @@ var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
 </ul>
   </div>
 
-</div><div class="slide">
 
 <h1>Pitfall #1 - globals</h1>
 <pre><code class="lang-javascript">for (i = 0; i &lt; 10; ++i) { /* ... */ }</code></pre>
@@ -1024,8 +966,6 @@ var saltys = new POI(47.587, -122.378, &#39;Saltys&#39;);</code></pre>
 <li>use JSLint, JSHint, yui-compressor, NetBeans, IntelliJ, ...</li>
 <li>Don&#39;t use <code>for(var i=0; ...</code> - this is misleading</li>
 </ul>
-</div><div class="slide">
-
 <h1>Pitfall #2 - hoisting</h1>
 <pre><code class="lang-javascript">console.log(typeof a);  // &#39;undefined&#39;
 console.log(typeof c);  // &#39;undefined&#39;
@@ -1039,8 +979,6 @@ if (false) {
 
 console.log(b); // undefined
 console.log(c); // ReferenceError: c is not defined</code></pre>
-</div><div class="slide">
-
 <h1>Pitfall #3 - type coercion</h1>
 <ul>
 <li><code>==</code> and <code>!=</code> do type coercion</li>
@@ -1055,8 +993,6 @@ console.log(c); // ReferenceError: c is not defined</code></pre>
 </p>
 <pre><code class="lang-javascript">7 === &quot;7&quot;     // false
 1 === true    // false</code></pre>
-</div><div class="slide">
-
 <h1>Pitfall #4 - this</h1>
 <pre><code class="lang-javascript">var obj = {
   name: &#39;Jason Bourne&#39;,
@@ -1069,9 +1005,8 @@ console.log(c); // ReferenceError: c is not defined</code></pre>
 obj.printLater(); // logs undefined</code></pre>
 <p><strong>this</strong> does not point to <code>obj</code>!
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>Pitfall #4 - this -&gt; self</h1>
 <pre><code class="lang-javascript">var obj = {
   name: &#39;Jason Bourne&#39;,
@@ -1084,9 +1019,6 @@ obj.printLater(); // logs undefined</code></pre>
   }
 };
 obj.printLater(); // logs Jason Bourne</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Pitfall - Numbers</h1>
 <pre><code class="lang-javascript">1/10 + 2/10            // 0.30000000000000004
@@ -1099,8 +1031,6 @@ Number.MAX_VALUE       // 1.7976931348623157e+308</code></pre>
 <li>All Numbers are 64-Bit floating point values</li>
 <li>Don&#39;t expect Exceptions</li>
 </ul>
-</div><div class="slide">
-
 <h1>Pitfall - Number Parsing</h1>
 <pre><code class="lang-javascript">parseInt(&#39;077&#39;)        // 63   (!) -&gt; octal value
 parseInt(&#39;080&#39;)        // 0    (!) -&gt; parse error
@@ -1120,7 +1050,6 @@ isNaN(Number(&#39;Jason&#39;)) // true</code></pre>
 Number(36 * 36 - 1).toString(36);     // &#39;zz&#39;</code></pre>
   </div>
 
-</div><div class="slide">
 
 <h1>Pitfall - ASI</h1>
 <ul>
@@ -1136,8 +1065,6 @@ return; // = return undefined;
 {
    a: true
 }; // code not reachable -&gt; garbage collected</code></pre>
-</div><div class="slide">
-
 <h1>Pitfall - forget new</h1>
 <pre><code class="lang-javascript">jQuery.Event = function( src, props ) {
   // Allow instantiation without the &#39;new&#39; keyword
@@ -1147,8 +1074,6 @@ return; // = return undefined;
 
   // ...
 };</code></pre>
-</div><div class="slide">
-
 <h1>Other Pitfalls</h1>
 <ul>
 <li>Side-Effects of closures, e.g. creating functions in a loop</li>
@@ -1158,9 +1083,6 @@ return; // = return undefined;
 <li><code>new Function</code> - rarly necessary</li>
 <li>&quot;enhancing&quot; Prototypes of String, Object, Function, ...</li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Fighting Pitfalls</h1>
 <ul>
@@ -1177,9 +1099,6 @@ return; // = return undefined;
 <li>consider using <a href="http://coffeescript.org/">CoffeeScript</a> (compiles to JavaScript)
 <br/><span class="fs66" style="color: #888">&ldquo;I don&#39;t like it - it is completely different and has no C-like {}...&rdquo;</span></li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Tools</h1>
 <ul>
@@ -1188,8 +1107,6 @@ return; // = return undefined;
 <li>Quality (Static Code Analyzers)</li>
 <li>Efficiency (Minification, Concatenation)</li>
 </ul>
-</div><div class="slide">
-
 <h1>JetBrains IDEs</h1>
 <ul>
 <li>IntelliJ IDEA, WebStorm, PhpStorm</li>
@@ -1203,9 +1120,8 @@ return; // = return undefined;
 </p>
 <p><strong>Demo?</strong>
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>Browser Tools</h1>
 <h2>Integrated</h2>
 <ul>
@@ -1218,9 +1134,8 @@ return; // = return undefined;
 </p>
 <p><strong>Demo?</strong>
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>JSHint (Static Code Analysis)</h1>
 <pre><code class="lang-javascript">/*jshint latedef:true, curly:true*/
 a = &#39;Wombosi&#39;;
@@ -1234,9 +1149,8 @@ var a;</code></pre>
 <p><li><p>Line 5: <code>var a;</code></p><p>&#39;a&#39; was used before it was defined.</p></li>
 </ul>
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>JSLint global declaration</h1>
 <pre><code class="lang-javascript">/*global jQuery*/
 
@@ -1247,8 +1161,6 @@ var a;</code></pre>
     // BTW jQuery is a property of window
 
 })( jQuery );</code></pre>
-</div><div class="slide">
-
 <h1>JSHint and Alternatives</h1>
 <ul>
 <li><a href="http://code.google.com/p/wro4j/">wro4j</a> - Web Resource Optimizer for Java</li>
@@ -1265,8 +1177,6 @@ var a;</code></pre>
 <li><a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a> with special options</li>
 <li><a href="https://developers.google.com/closure/compiler/">Closure Compiler</a> with special options or <code>gjslint</code></li>
 </ul>
-</div><div class="slide">
-
 <h1>JSHint in Java/Maven</h1>
 <div style="background-color: #000; color:#fff; font-family: monospace; padding: 0.5em;" class="fs66">
 <span style="color: #00ffff">&lt;</span><span style="color: #00ffff">plugin</span><span style="color: #00ffff">&gt;</span><br>
@@ -1281,7 +1191,6 @@ var a;</code></pre>
 <span style="color: #00ffff">&lt;/plugin&gt;</span><br>
 </div>
 
-</div><div class="slide">
 
 <h1>JS[HL]int IDE Integration</h1>
 <ul>
@@ -1301,9 +1210,6 @@ var a;</code></pre>
 </ul>
 </li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Debugging Proxies</h1>
 <ul>
@@ -1311,12 +1217,9 @@ var a;</code></pre>
 <span class="fs50">HTTP proxy, monitor, Reverse Proxy; enables a developer to view HTTP/HTTPS traffic</span></li>
 <li><a href="http://www.fiddler2.com/fiddler2/version.asp">Fiddler</a> Web Debugging Proxy</li>
 </ul>
-</div><div class="slide">
-
 <h1>jsFiddle (Example)</h1>
 <div style="background: url('media/jsfiddle-example.png') no-repeat center center; height: 100%"></div>
 
-</div><div class="slide">
 
 <h1>jsFiddle</h1>
   <div style="background: url('media/jsfiddle-logo.png') no-repeat right top; height: 100%">
@@ -1334,7 +1237,6 @@ var a;</code></pre>
 </ul>
   </div>
 
-</div><div class="slide">
 
 <h1>console</h1>
 <p>Poor man&#39;s debugger :-;
@@ -1358,7 +1260,6 @@ console.error(&#39;No more beer&#39;);</code></pre>
 </p>
   </div>
 
-</div><div class="slide">
 
 <h1>console: old browsers</h1>
 <ul>
@@ -1373,10 +1274,6 @@ console.error(&#39;No more beer&#39;);</code></pre>
     };
   }(window));
 }</code></pre>
-</div>
-
-
-<div class="slide">
 
 <h1>Testing</h1>
 <table class="info">
@@ -1401,8 +1298,6 @@ console.error(&#39;No more beer&#39;);</code></pre>
 <a href="http://en.wikipedia.org/wiki/Behavior_Driven_Development">Behavior Driven Development (BDD)</a>,
 <a href="http://testanything.org/wiki/index.php/Main_Page">Test Anything Protocol (TAP)</a></li>
 </ul>
-</div><div class="slide">
-
 <h1>Testing-Tools</h1>
 <h2>Integration Tests</h2>
 <ul>
@@ -1419,9 +1314,6 @@ console.error(&#39;No more beer&#39;);</code></pre>
 <li><a href="http://docs.jquery.com/QUnit">QUnit</a></li>
 <li>many more ...</li>
 </ul>
-</div>
-
-<div class="slide">
 
 <h1>Assertion Libraries</h1>
 <ul>
@@ -1437,8 +1329,6 @@ expect({ a: &#39;b&#39; }).to.eql({ a: &#39;b&#39; })
 expect(5).to.be.a(&#39;number&#39;);
 expect([]).to.be.an(&#39;array&#39;);
 expect(window).not.to.be.an(Image);</code></pre>
-</div><div class="slide">
-
 <h1>Mock / Spy / Stubs</h1>
 <ul>
 <li><a href="http://sinonjs.org/">Sinon.js</a> (see example below)</li>
@@ -1455,8 +1345,6 @@ callback.withArgs(1).throws(&quot;TypeError&quot;);
 callback(); // No return value, no exception
 callback(42); // Returns 1
 callback(1); // Throws TypeError</code></pre>
-</div><div class="slide">
-
 <h1>Demo: mocha / expect.js</h1>
 <div style="color: #aaa">see code-snippets/javascript/inheritance-test.js</div>
 
@@ -1479,9 +1367,6 @@ callback(1); // Throws TypeError</code></pre>
 <pre><code>$ mocha inheritance-test.js
 $ mocha --reporter spec *-test.js
 $ mocha --watch --growl *-test.js</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>JavaScript in Facelets (1)</h1>
 <ul>
@@ -1499,8 +1384,6 @@ $ mocha --watch --growl *-test.js</code></pre>
 <li><p>encode <code>&lt;</code> <code>&gt;</code> <code>&amp;</code> with <code>&amp;lt;</code> <code>&amp;gt;</code> <code>&amp;amp;</code></p>
 </li>
 </ul>
-</div><div class="slide">
-
 <h1>JavaScript in Facelets (2)</h1>
 <pre><code class="lang-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
 // &lt;![CDATA[
@@ -1512,9 +1395,6 @@ $ mocha --watch --growl *-test.js</code></pre>
 
 // ]]&gt;
 &lt;/script&gt;</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Efficiency / Performance</h1>
 <p>Concatenate and minify js files!
@@ -1535,7 +1415,6 @@ $ mocha --watch --growl *-test.js</code></pre>
 </p>
 <div style="padding-left: 2em; padding-top: 0.5em; color: #888" class="fs66">The Asynchronous Module Definition (AMD) API specifies a mechanism for defining modules such that the module and its dependencies can be asynchronously loaded.</div>
 
-</div><div class="slide">
 
 <h1>Example: uglify-js</h1>
 <pre><code class="lang-javascript">(function (window, undefined) {
@@ -1549,9 +1428,6 @@ $ mocha --watch --growl *-test.js</code></pre>
 }(window));</code></pre>
 <pre><code class="lang-javascript">(function(e,t){var n=&quot;Wombosi&quot;;/bos/.test(n) ↵
 &amp;&amp;(n+=&quot;!&quot;),e.wom===t&amp;&amp;(e.wom=n)})(window);</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>jQuery Examples</h1>
 <div class="fs50" style="color: #888; margin-bottom: 0.5em">From: <a href="http://github.com/rmurphey/jqfundamentals">jQuery Fundamentals</a> by Rebecca Murphey</div>
@@ -1569,9 +1445,6 @@ $ mocha --watch --growl *-test.js</code></pre>
     },
     300
 );</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>jQuery Mobile - head</h1>
 <pre><code>&lt;!DOCTYPE html&gt;
@@ -1583,8 +1456,6 @@ $ mocha --watch --growl *-test.js</code></pre>
     &lt;script src=&quot;jquery.mobile-1.1.0.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;my-application.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;</code></pre>
-</div><div class="slide">
-
 <h1>jQuery Mobile - body</h1>
 <pre><code>&lt;section id=&quot;home&quot; data-role=&quot;page&quot;&gt;
   &lt;header data-role=&quot;header&quot;&gt;
@@ -1599,8 +1470,6 @@ $ mocha --watch --growl *-test.js</code></pre>
 &lt;section id=&quot;help&quot; data-role=&quot;page&quot;&gt;
 ...
 &lt;/section&gt;</code></pre>
-</div><div class="slide">
-
 <h1>jQuery Mobile - code</h1>
 <pre><code class="lang-javascript">$(&#39;#home&#39;).live(&#39;pagebeforecreate&#39;, function() {
     $.mobile.showPageLoadingMsg();
@@ -1616,9 +1485,6 @@ $(function () {
         myapp.nextSlide();
     });
 });</code></pre>
-</div>
-
-<div class="slide">
 
 <h1>Reading</h1>
 <h2>Internet</h2>
@@ -1636,15 +1502,12 @@ Douglas Crockford, O&#39;Reilly, 2008</li>
 Stoyan Stefanov, O&#39;Reilly, 2010</li>
 <li>(Many more books, a lot of good resources online)</li>
 </ul>
-</div>
-<div class="slide">
 
 <h1>Questions?</h1>
 <p><img src="media/questions.jpg" class="scaled-centered">
 
-</p>
-</div><div class="slide">
 
+</p>
 <h1>Thank you!</h1>
 <pre><code class="lang-javascript">// my mail address
 &#39;hgoebl+goebl.com&#39;.replace(&#39;+&#39;, &#39;@&#39;)</code></pre>
@@ -1666,9 +1529,7 @@ Stoyan Stefanov, O&#39;Reilly, 2010</li>
 </p>
 </td></tr></table>
 
-</div>
 
-<div class="slide">
 <h1>Backup</h1>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -1895,10 +1756,7 @@ Stoyan Stefanov, O&#39;Reilly, 2010</li>
   </g>
 </svg>
 <div class="fs50">taken from: <a href="http://rationalwiki.org/wiki/File:Stop_sign.svg">http://rationalwiki.org/ (Creative Commons Licensed)</a></div>
-</div>
 
-
-<div class="slide">
 
 <h1>switch - not like Java!</h1>
 <pre><code class="lang-javascript">var i, c = 3,
@@ -1912,8 +1770,6 @@ for (i = 1; i &lt;= 3; ++i) {
     default:  console.log(&#39;?&#39;); break;
   }
 }</code></pre>
-</div><div class="slide">
-
 <h1>Exception Handling (1)</h1>
 <pre><code class="lang-javascript">try {
   fn();           // fn is not defined anywhere
@@ -1926,8 +1782,6 @@ catch (e) {
 finally {
   console.log(&#39;finally&#39;);
 }</code></pre>
-</div><div class="slide">
-
 <h1>Exception Handling (2)</h1>
 <pre><code class="lang-javascript">throw {
   type: &#39;...&#39;,
@@ -1935,8 +1789,6 @@ finally {
 };
 
 throw Error(&#39;Bei mia is ois kabutt&#39;);</code></pre>
-</div><div class="slide">
-
 <h1>console: measuring time</h1>
 <pre><code class="lang-javascript">var i;
 console.time(&#39;myHeavyLoop&#39;);
@@ -1945,8 +1797,6 @@ for (i = 0; i &lt; 100000; i++) {
 }
 console.timeEnd(&#39;myHeavyLoop&#39;);
 // myHeavyLoop: 12ms</code></pre>
-</div><div class="slide" data-expert-level="5">
-
 <h1>Pitfall - function in loop</h1>
 <ul>
 <li>Functions are Closures!</li>
@@ -1960,8 +1810,6 @@ for (i = 0; i &lt; 10; i++) {
 
 nums[0](2); // Prints 12 instead of 2
 // example from www.jshint.com/options/</code></pre>
-</div><div class="slide" data-expert-level="5">
-
 <h1>Pitfall - function in loop</h1>
 <p>Solution: copy the value of <code>i</code>
 
@@ -1975,15 +1823,11 @@ for (i = 0; i &lt; 10; i++) {
   }(i));
 }
 // example from www.jshint.com/options/</code></pre>
-</div><div class="slide">
-
 <h1>Documentation</h1>
 <ul>
 <li><a href="http://jashkenas.github.com/docco/">http://jashkenas.github.com/docco/</a> (literate-programming-style documentation generator)</li>
 <li><a href="http://code.google.com/p/jsdoc-toolkit/">http://code.google.com/p/jsdoc-toolkit/</a> jsdoc-toolkit - A documentation generator for JavaScript</li>
 </ul>
-</div><div class="slide">
-
 <h1>Content Delivery Networks</h1>
 <ul>
 <li><a href="https://developers.google.com/speed/libraries/">Google Ajax Libraries</a></li>
@@ -1993,8 +1837,6 @@ for (i = 0; i &lt; 10; i++) {
 <li><a href="http://www.cdnjs.com/">http://www.cdnjs.com/</a></li>
 <li>Don&#39;t use source repositories (svn/...)</li>
 </ul>
-</div><div class="slide">
-
 <h1>Boolean Expressions (2)</h1>
 <pre><code class="lang-javascript">function f(o) {
   if (o &amp;&amp; o.prop) {
@@ -2009,8 +1851,6 @@ for (i = 0; i &lt; 10; i++) {
     // use it
   }
 }</code></pre>
-</div><div class="slide">
-
 <h1>Conclusions (1)</h1>
 <ul>
 <li>JavaScript does not support block scope</li>
@@ -2023,8 +1863,6 @@ for (i = 0; i &lt; 10; i++) {
 <li><p>check <code>hasOwnProperty</code> when doing <code>for(e in obj)</code></p>
 </li>
 </ul>
-</div><div class="slide">
-
 <h1>Conclusions (2)</h1>
 <ul>
 <li><p>use <code>===</code> and <code>!==</code>, avoid <code>==</code> and <code>!=</code></p>
@@ -2034,21 +1872,19 @@ for (i = 0; i &lt; 10; i++) {
 <li>use a lint program (or an IDE plugin)</li>
 <li>don&#39;t use <code>new Array</code> and <code>new Object</code></li>
 </ul>
-</div>
 
 
 </div>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/hammer/hammer-1.0.6.min.js" type="text/javascript"></script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/s5/ui/common/s5.js" type="text/javascript"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/hammer/hammer.min.js" type="text/javascript"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/s5/ui/common/s5.js" type="text/javascript"></script>
 <script>
     window.hijs = '.lang-javascript';
 </script>
-<script src="http://hgoebl.github.io/nerdshow/rt/0.3.0/hijs/hijs.js"></script>
+<script src="http://hgoebl.github.io/nerdshow/rt/0.4.0/hijs/hijs.js"></script>
 <script>
 
     $(function () {
-        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.io/nerdshow/rt/0.3.0/hijs/my-hijs.css"/>').appendTo('head');
+        $('<link rel="stylesheet" type="text/css" href="http://hgoebl.github.io/nerdshow/rt/0.4.0/hijs/my-hijs.css"/>').appendTo('head');
     });
 
 </script>

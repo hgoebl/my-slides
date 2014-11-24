@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # count, distinct, group
 
@@ -18,4 +17,3 @@ db.runCommand({group: {
 }});
 ```
 
-.</div>

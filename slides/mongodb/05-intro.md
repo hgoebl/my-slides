@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # What is MongoDB?
 
@@ -20,7 +19,6 @@
 
 .   </div>
 
-.</div><div class="slide">
 
 # Some facts
 
@@ -32,13 +30,13 @@
    * Professional Support
    * First Class Documentation
 
-.</div><div class="slide">
+
 
 # Database Landscape
 
 <img src="media/mongo-db-landscape.png" class="scaled-centered">
 
-.</div><div class="slide">
+
 
 # Terminology
 
@@ -57,4 +55,3 @@
 </tbody>
 </table>
 
-.</div>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # What is JavaScript?
 
@@ -30,7 +29,6 @@ JavaScript
 
 .   </div>
 
-.</div><div class="slide">
 
 # Why JavaScript?
 
@@ -57,4 +55,3 @@ JavaScript
 
 .   </div>
 
-.</div>

@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Assertion Libraries
 
@@ -17,7 +16,6 @@ expect(window).not.to.be.an(Image);
 ```
 
 
-.</div><div class="slide">
 
 # Mock / Spy / Stubs
 
@@ -37,7 +35,6 @@ callback(42); // Returns 1
 callback(1); // Throws TypeError
 ```
 
-.</div><div class="slide">
 
 # Demo: mocha / expect.js
 
@@ -63,4 +60,3 @@ $ mocha --reporter spec *-test.js
 $ mocha --watch --growl *-test.js
 ```
 
-.</div>

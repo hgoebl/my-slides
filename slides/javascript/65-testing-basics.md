@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Testing
 
@@ -22,7 +21,6 @@
    [Behavior Driven Development (BDD)](http://en.wikipedia.org/wiki/Behavior_Driven_Development),
    [Test Anything Protocol (TAP)](http://testanything.org/wiki/index.php/Main_Page)
 
-.</div><div class="slide">
 
 # Testing-Tools
 
@@ -40,4 +38,3 @@
  * [QUnit](http://docs.jquery.com/QUnit)
  * many more ...
 
-.</div>

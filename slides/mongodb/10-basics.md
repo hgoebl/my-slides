@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # Document Data Model
 
@@ -15,7 +14,7 @@ var book = {
 };
 ```
 
-.</div><div class="slide">
+
 
 # Insert
 
@@ -29,7 +28,7 @@ db.books.save(book);
 book._id;
 ```
 
-.</div><div class="slide">
+
 
 # Simple Queries 1
 
@@ -46,7 +45,7 @@ db.books.findOne({
 });
 ```
 
-.</div><div class="slide">
+
 
 # Simple Queries 2
 
@@ -59,7 +58,7 @@ db.books.find({ title: /^MongoDB/,   // and
                 pages: {$gt: 200} });
 ```
 
-.</div><div class="slide">
+
 
 # Query Deep Structures
 
@@ -76,7 +75,7 @@ db.books.find({
   ]});
 ```
 
-.</div><div class="slide">
+
 
 # Query Multivalued Fields
 
@@ -92,4 +91,3 @@ db.books.find({
   });
 ```
 
-.</div>

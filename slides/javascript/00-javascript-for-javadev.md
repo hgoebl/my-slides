@@ -1,4 +1,3 @@
-.<div class="slide">
 
 # JavaScript
 
@@ -8,7 +7,6 @@
 
 #### www.goebl.com
 
-.</div><div class="slide" style="">
 
 # About me
 
@@ -25,4 +23,3 @@
 
 .</td></tr></table>
 
-.</div>

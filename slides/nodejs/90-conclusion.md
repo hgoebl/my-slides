@@ -1,6 +1,7 @@
-.<div class="slide">
 
 # Conclusion
+
+.<div class="fs75">
 
 **Pro**<br/><br/>
 
