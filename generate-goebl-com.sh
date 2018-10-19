@@ -1,7 +1,7 @@
 #!/bin/sh
 
 PRESENTATION="presentation.json"
-RT=http://hgoebl.github.io/nerdshow/rt/0.4.0
+RT=https://hgoebl.github.io/nerdshow/rt/0.4.0
 OPTIONS="--nerdshow-folder ${RT} --no-socketio-enabled --no-zoom-enabled"
 
 nerdshow-generate slides/javascript/${PRESENTATION} ${OPTIONS}
